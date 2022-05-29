@@ -45,6 +45,12 @@ form a {
   border-radius: 100% 0.5rem 0.5rem 100%;
 }
 
+.signup-btn {
+  left: 2rem;
+  padding: 0.5rem 1rem 0.5rem 3rem;
+  border-radius: 100% 0.5rem 0.5rem 100%;
+}
+
 form h2 {
   font-size: 2rem;
 
@@ -69,4 +75,17 @@ form h2 {
   color: #fff;
   letter-spacing: 0.1rem;
   outline: none;
+}
+
+input-wrapper input::placeholder {
+  color: #fff;
+  font-weight: 300;
+}
+
+.inputs-wrapper input[type="submit"] {
+  background-color: #fff;
+  color: rgb(40, 114, 108);
+  font-weight: 900;
+  text-transform: uppercase;
+  cursor: pointer;
 }
