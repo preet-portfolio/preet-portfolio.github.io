@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Arial", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100vh;
+  background: linear-gradient(rgba(31, 7, 7, 0.7), rgba(31, 7, 7, 0.7)),
+    url(images/bg.jpeg) center no-repeat;
+  background-size: cover;
+}
