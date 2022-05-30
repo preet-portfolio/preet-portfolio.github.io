@@ -1,0 +1,9 @@
+.recent-projects {
+  height: auto;
+  margin: 1rem;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #ccc;
+  overflow: hidden;
+}
