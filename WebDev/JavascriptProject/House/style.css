@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 72.5%;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(103, 150, 103);
+  display: grid;
+  place-items: center;
+}
+
+.house {
+  width: 110rem;
+  height: 70rem;
+  background-color: #efefef;
+  position: relative;
+  perspective: 100rem;
+}
+
+.main-roof {
+  width: 110%;
+  height: 30rem;
+  background-color: rgb(8, 67, 145);
+  position: absolute;
+  top: -10rem;
+  left: -5%;
+  transform: rotatex(20deg);
+  border-radius: 1rem 1rem 0.5rem 0.5rem;
+  box-shadow: 0.5rem 1rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+.window {
+  width: 12rem;
+  height: 15rem;
+  background-color: #aaa;
+  border: 0.4rem solid #333;
+  position: absolute;
+}
+
+.top-left-window {
+  top: 22rem;
+  left: 10rem;
+}
+
+.top-right-window {
+  top: 22rem;
+  right: 10rem;
+}
+
+.bottom-left-window {
+  top: 43rem;
+  left: 10rem;
+}
+
+.bottom-right-window {
+  top: 43rem;
+  right: 10rem;
+}
