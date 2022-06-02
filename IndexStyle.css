@@ -1,3 +1,8 @@
+.intro {
+  background-color: #f5f5f5;
+  padding: 10px;
+  margin-bottom: 10px;
+}
 .recent-projects {
   height: auto;
   margin: 1rem;
