@@ -17,6 +17,11 @@ html {
   scroll-behavior: smooth;
 }
 
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /* End of Common Style */
 
 /* Mouse Circle */
@@ -99,6 +104,11 @@ html {
   width: 100%;
   height: 100vh;
 }
+/* 
+.img {
+  width: 60rem;
+  height: 70rem;
+} */
 /* Logo */
 .logo {
   position: absolute;
@@ -109,4 +119,39 @@ html {
   color: #fff;
 }
 /* End of Logo */
+/* Animated Cirecle */
+.circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.main-circle {
+  width: 55rem;
+  height: 55rem;
+  position: absolute;
+  overflow: hidden;
+  border-radius: 50%;
+  transition: width 0.2s, height 0.2s;
+}
+.main-circle:hover {
+  width: 75rem;
+  height: 75rem;
+}
+.main-circle img {
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: color-dodge;
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: left 2s, top 2s;
+}
+/* End of Animatemed circle */
 /* End of Section */
