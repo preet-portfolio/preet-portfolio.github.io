@@ -29,7 +29,9 @@ html {
   bottom: 3rem;
   width: 13rem;
   height: 13rem;
-  background-color: #081c15; //Algonqion Green
+  /* Algonqion Green  */
+  background-color: #081c15;
+
   border-radius: 50%;
   border: 0.2rem dotted #fff;
   padding: 0.1rem;
