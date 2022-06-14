@@ -22,6 +22,7 @@ html {
   justify-content: center;
   align-items: center;
 }
+
 /* End of Common Style */
 
 /* Mouse Circle */
@@ -46,23 +47,28 @@ html {
     width: 6rem;
     height: 6rem;
   }
+
   25% {
     width: 8rem;
     height: 8rem;
   }
+
   35% {
     width: 4rem;
     height: 4rem;
   }
+
   70% {
     width: 8rem;
     height: 8rem;
   }
+
   100% {
     width: 6rem;
     height: 6rem;
   }
 }
+
 .mouse-dot {
   width: 0.5rem;
   height: 0.5rem;
@@ -75,15 +81,18 @@ html {
     width: 0.5rem;
     height: 0.5rem;
   }
+
   55% {
     width: 1.5rem;
     height: 1.5rem;
   }
+
   100% {
     width: 0.5rem;
     height: 0.5rem;
   }
 }
+
 /* End of Mouse Circle */
 
 /* Page BG */
@@ -96,6 +105,7 @@ html {
     url(Images/bg.jpg) center no-repeat;
   background-size: cover;
 }
+
 /* End of Page BG *
 
 /* Section */
@@ -104,6 +114,7 @@ html {
   width: 100%;
   height: 100vh;
 }
+
 /* 
 .img {
   width: 60rem;
@@ -118,6 +129,7 @@ html {
   text-transform: uppercase;
   color: #fff;
 }
+
 /* End of Logo */
 /* Animated Cirecle */
 .circles {
@@ -131,37 +143,43 @@ html {
 
   grid-template-rows: repeat(2, 1fr);
 }
+
 .circle {
   width: 22rem;
   height: 22rem;
   border-radius: 50%;
-  background-color: red;
+
   align-self: center;
   justify-self: center;
+  opacity: .9;
 }
+
 .circle-1 {
   background: url(Images/2.jpg) center no-repeat;
   background-size: cover;
   background-clip: content-box;
   border: 0.5rem dotted #2584d7;
 }
+
 .circle-2 {
   background: url(Images/3.jpg) center no-repeat;
   background-size: cover;
   background-clip: content-box;
-  border: 0.5rem dotted #a14b1a;
+  border: 0.5rem dashed #a14b1a;
 }
+
 .circle-3 {
   background: url(Images/4.jpg) center no-repeat;
   background-size: cover;
   background-clip: content-box;
-  border: 0.5rem dotted #a14b1a;
+  border: 0.5rem double #a14b1a;
 }
+
 .circle-4 {
   background: url(Images/3.jpg) center no-repeat;
   background-size: cover;
   background-clip: content-box;
-  border: 0.5rem dotted #a14b1a;
+  border: 0.7rem double #fff;
 }
 
 .main-circle {
@@ -172,10 +190,12 @@ html {
   border-radius: 50%;
   transition: width 0.2s, height 0.2s;
 }
+
 .main-circle:hover {
   width: 75rem;
   height: 75rem;
 }
+
 .main-circle img {
   width: 100%;
   height: 100%;
@@ -185,5 +205,25 @@ html {
   left: 0;
   transition: left 2s, top 2s;
 }
+
 /* End of Animatemed circle */
+/* Featured Text */
+.featured-text {
+  font-size: 2rem;
+  color: #fff;
+  text-transform: uppercase;
+
+}
+
+
+.featured-text-1 {
+  margin: 0 auto 0 10 rem;
+}
+
+
+.featured-text-2 {
+  margin: 0 10rem 0 auto;
+}
+
+/*End of  Featured Text */
 /* End of Section */
