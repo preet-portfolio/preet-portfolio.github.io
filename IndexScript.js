@@ -256,7 +256,7 @@ menuIcon.addEventListener("click", () => {
 // About Me Text
 const aboutMeText = document.querySelector(".about-me-text");
 const aboutMeTextContent =
-  "I am Web Developer with a passion for creating beautiful and functional websites. I have a strong background in User Experience Design. currenly i am looking for a job in the field of Web Development.";
+  "I am Web Developer with a passion for creating beautiful and functional websites. I have a strong background in User Experience Design. I want be a part of a team that values the user experience and wants to make the world a better place.";
 Array.from(aboutMeTextContent).forEach((char) => {
   const span = document.createElement("span");
   span.textContent = char;
@@ -306,7 +306,7 @@ projects.forEach((project, i) => {
       progressBarFn(bigImgWrapper);
     };
 
-    projectHideBtn.classList.add("change");
+    HideBtn.classList.add("change");
 
     projectHideBtn.onclick = () => {
       projectHideBtn.classList.remove("change");
