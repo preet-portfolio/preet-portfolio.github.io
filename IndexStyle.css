@@ -466,10 +466,10 @@ html {
   font-family: 'Montserrat', sans-serif;
   font-size: 15rem;
   font-weight: bold;
-  color: #fff;
+  color: blue;
   letter-spacing: 0.5rem;
   line-height: 0.9;
-  text-shadow: 0 0 1rem #9b0e0e;
+  text-shadow: 0 0 1rem white;
   position: relative;
   mix-blend-mode: color-dodge;
 }
