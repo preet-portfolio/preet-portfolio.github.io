@@ -1,4 +1,3 @@
-
 // Game Area Below
 let box = {};
 const score = document.querySelector(".score");
