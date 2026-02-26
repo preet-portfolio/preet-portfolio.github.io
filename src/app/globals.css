@@ -1,26 +1,180 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer theme {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* Focus on contrast and readability, minimal palette */
+    --slate-900: #0f172a;
+    --slate-800: #1e293b;
+    --slate-400: #94a3b8;
+    --slate-300: #cbd5e1;
+    --slate-200: #e2e8f0;
+
+    --teal-400: #5eead4;
+    /* Accent color like brittanychiang */
+    --teal-300: #5eead4;
+
+    --bg-primary: var(--slate-900);
+    --bg-elevated: rgba(30, 41, 59, 0.5);
+    /* translucent slate-800 */
+    --bg-highlight: rgba(45, 212, 191, 0.1);
+    /* teal highlight */
+
+    --text-primary: var(--slate-200);
+    --text-secondary: var(--slate-400);
+    --text-accent: var(--teal-300);
+
+    --font-sans: "Inter", system-ui, sans-serif;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-secondary);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+  }
+
+  ::selection {
+    background-color: var(--teal-300);
+    color: var(--slate-900);
+  }
+
+  /* Typography scale */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--text-primary);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    line-height: 1.1;
+  }
+
+  h2 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  a:hover {
+    color: var(--text-accent);
+  }
+}
+
+@layer utilities {
+  .text-accent {
+    color: var(--text-accent);
+  }
+
+  .bg-highlight {
+    background-color: var(--bg-highlight);
+  }
+
+  /* Layout utilities */
+  .layout-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  /* Focus ring for accessibility */
+  .focus-ring:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--bg-primary), 0 0 0 4px var(--teal-400);
+  }
+
+  /* Experience/Project card hover block */
+  .group-hover-block {
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    padding: 1.5rem;
+    margin: 0 -1.5rem;
+    border-radius: 1rem;
+  }
+
+  .group-hover-block:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+    box-shadow: inset 0 1px 0 0 rgba(148, 163, 184, 0.1);
+    filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+  }
+
+  /* Link with animated underline */
+  .link-underline {
+    position: relative;
+    color: var(--text-primary);
+    font-weight: 500;
+    display: inline-flex;
+    align-items: baseline;
+  }
+
+  .link-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--text-accent);
+    transform-origin: bottom right;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-out;
+  }
+
+  .link-underline:hover::after {
+    transform-origin: bottom left;
+    transform: scaleX(1);
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.2);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.4);
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
