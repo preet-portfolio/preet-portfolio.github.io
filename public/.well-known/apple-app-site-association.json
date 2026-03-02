@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["N4C8WZY2YP.com.Prxxt.DocFort"],
+        "components": [
+          {
+            "/": "/join",
+            "comment": "DocFort team invite Universal Link"
+          }
+        ]
+      }
+    ]
+  }
+}
