@@ -42,9 +42,17 @@ export default function GeoLensPage() {
                         verified identity — and embeds a machine-readable EXIF audit trail that banks and agencies can check.
                     </p>
 
-                    <span className="inline-flex items-center rounded-full border border-slate-700 px-4 py-1.5 text-xs font-semibold tracking-wide text-slate-400">
-                        Coming soon to the App Store
-                    </span>
+                    <div className="flex flex-wrap gap-3">
+                        <span className="inline-flex items-center rounded-full border border-slate-700 px-4 py-1.5 text-xs font-semibold tracking-wide text-slate-400">
+                            Coming soon to the App Store
+                        </span>
+                        <span className="inline-flex items-center rounded-full bg-sky-500/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-sky-300">
+                            100% Ad-Free
+                        </span>
+                        <span className="inline-flex items-center rounded-full bg-sky-500/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-sky-300">
+                            Zero Data Collection
+                        </span>
+                    </div>
                 </header>
 
                 {/* The stamp — the product's signature, recreated */}
