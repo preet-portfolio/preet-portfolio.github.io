@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
 export const metadata = {
-    title: "GeoLens — Terms of Use",
+    title: "GeoLens — Terms of Use (EULA)",
     description: "GeoLens terms of use: subscriptions, accuracy disclosures, and acceptable use.",
 };
 
@@ -27,7 +27,7 @@ export default function GeoLensTermsPage() {
                 </nav>
 
                 <header className="mb-12">
-                    <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-200 mb-2">GeoLens Terms of Use</h1>
+                    <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-200 mb-2">Terms of Use (EULA)</h1>
                     <p className="text-sm text-slate-500">Last updated: June 11, 2026</p>
                 </header>
 
