@@ -3,7 +3,7 @@ import { ArrowLeft, Map, ShieldCheck, Navigation, Briefcase, FileText, Lock } fr
 
 export const metadata = {
     title: "GeoLens | Evidence-Grade Geotagging Camera",
-    description: "GeoLens stamps every photo with coordinates, address, a map of the spot, and a verifiable EXIF audit trail. Built for surveyors, valuers, and field inspectors.",
+    description: "GeoLens stamps every photo with coordinates, address, a map of the spot, and a verifiable EXIF audit trail. Built for surveyors, valuers, and field inspectors. Available on the App Store.",
 };
 
 export default function GeoLensPage() {
@@ -42,10 +42,20 @@ export default function GeoLensPage() {
                         verified identity — and embeds a machine-readable EXIF audit trail that banks and agencies can check.
                     </p>
 
-                    <div className="flex flex-wrap gap-3">
-                        <span className="inline-flex items-center rounded-full border border-slate-700 px-4 py-1.5 text-xs font-semibold tracking-wide text-slate-400">
-                            Coming soon to the App Store
-                        </span>
+                    <div className="flex flex-wrap items-center gap-4">
+                        <a
+                            href="https://apps.apple.com/us/app/geolens-geotag-camera/id6779347733"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block focus-ring rounded-lg transition-transform hover:scale-105"
+                            aria-label="Download GeoLens on the App Store"
+                        >
+                            <img
+                                src="/app-store-badge-black.svg"
+                                alt="Download on the App Store"
+                                className="h-11 w-auto"
+                            />
+                        </a>
                         <span className="inline-flex items-center rounded-full bg-sky-500/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-sky-300">
                             100% Ad-Free
                         </span>
@@ -128,6 +138,29 @@ export default function GeoLensPage() {
                             </p>
                         </div>
                     </div>
+                </section>
+
+                <div className="h-px bg-slate-800/50 w-full mb-16"></div>
+
+                {/* Download CTA */}
+                <section className="mb-16 text-center">
+                    <h2 className="text-2xl font-semibold text-slate-200 mb-3">Available on the App Store</h2>
+                    <p className="text-slate-400 leading-relaxed mb-8 max-w-xl mx-auto">
+                        Free to download. 5 stamped captures per month on the free plan — upgrade to Premium for unlimited captures, full sensor resolution, and watermark removal.
+                    </p>
+                    <a
+                        href="https://apps.apple.com/us/app/geolens-geotag-camera/id6779347733"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block focus-ring rounded-lg transition-transform hover:scale-105"
+                        aria-label="Download GeoLens on the App Store"
+                    >
+                        <img
+                            src="/app-store-badge-black.svg"
+                            alt="Download on the App Store"
+                            className="h-12 w-auto"
+                        />
+                    </a>
                 </section>
 
                 <div className="h-px bg-slate-800/50 w-full mb-16"></div>

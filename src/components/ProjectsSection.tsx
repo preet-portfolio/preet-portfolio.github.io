@@ -58,9 +58,19 @@ export default function ProjectsSection() {
                                 </ul>
 
                                 <div className="mt-6">
-                                    <span className="relative z-10 inline-flex items-center rounded-full border border-slate-700 px-4 py-1.5 text-xs font-semibold tracking-wide text-slate-400">
-                                        Coming soon to the App Store
-                                    </span>
+                                    <a
+                                        href="https://apps.apple.com/us/app/geolens-geotag-camera/id6779347733"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="relative z-10 inline-block focus-ring rounded-lg transition-transform hover:scale-105"
+                                        aria-label="Download GeoLens on the App Store"
+                                    >
+                                        <img
+                                            src="/app-store-badge-black.svg"
+                                            alt="Download on the App Store"
+                                            className="h-10 w-auto"
+                                        />
+                                    </a>
                                 </div>
                             </div>
                         </div>
