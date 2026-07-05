@@ -59,10 +59,10 @@ export default function LeftSidebar() {
                     Preet Panchal
                 </h1>
                 <h2 className="text-lg font-medium tracking-tight text-[var(--text-primary)] sm:text-xl">
-                    iOS Developer & App Creator
+                    Software Builder
                 </h2>
                 <p className="mt-4 max-w-xs leading-normal">
-                    I craft beautiful, privacy-first software that solves real problems.
+                    I build software that respects the people who use it — from privacy-first iOS apps to trust-first business tools.
                 </p>
 
                 {/* Navigation - Hidden on mobile, visible on lg+ */}
