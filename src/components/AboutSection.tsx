@@ -13,18 +13,26 @@ export default function AboutSection() {
             <AnimatedSection>
                 <div className="space-y-6">
                     <p>
-                        I&apos;m an iOS developer who believes software should be simple,
-                        beautiful, and secure. My journey started with a fascination for the Apple
-                        ecosystem, and it has evolved into a dedication to crafting robust native
-                        experiences using <strong className="font-semibold text-[var(--teal-300)]">Swift</strong> and <strong className="font-semibold text-[var(--teal-300)]">SwiftUI</strong>.
+                        I build software for people who need to trust it with something that
+                        matters — their documents, their location data, their margins. That&apos;s
+                        meant native iOS craft in <strong className="font-semibold text-[var(--teal-300)]">Swift</strong> and <strong className="font-semibold text-[var(--teal-300)]">SwiftUI</strong>,
+                        and lately it&apos;s meant backend pipelines that reconcile financial data
+                        without ever presenting an unverified claim as fact.
                     </p>
                     <p>
-                        Currently, my main focus is <strong className="font-semibold text-[var(--text-primary)]">DocFort</strong>, a privacy-first document vault engineered for zero data collection. Every line of code I write serves a singular mission: making technology that respects the people who use it.
+                        <strong className="font-semibold text-[var(--text-primary)]">DocFort</strong>, my privacy-first document vault, is built
+                        around one rule: it extracts what it needs and never stores the underlying
+                        image. <strong className="font-semibold text-[var(--text-primary)]">AuditWedge</strong>, the cross-border margin-audit
+                        tool I&apos;m building now, runs on the same underlying value applied to a
+                        different problem: no unverified claim reaches a merchant without a
+                        confidence score and a traceable source record. Different domain, same
+                        discipline.
                     </p>
                     <p>
                         Whether I&apos;m optimizing an app&apos;s footprint to under 4MB, refining a
-                        glassmorphic animation, or ensuring 100% offline capability, I care deeply
-                        about the fine details that divide &quot;good&quot; software from &quot;great&quot; software.
+                        glassmorphic animation, or making sure a fallback-matching algorithm never
+                        silently pairs two different product variants, I care deeply about the fine
+                        details that divide &quot;good&quot; software from &quot;great&quot; software.
                     </p>
                 </div>
             </AnimatedSection>

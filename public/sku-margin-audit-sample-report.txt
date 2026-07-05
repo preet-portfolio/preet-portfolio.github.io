@@ -1,0 +1,96 @@
+======================================================================
+SKU MARGIN AUDIT — DRAFT REPORT
+======================================================================
+
+13 invoice line items processed = 7 matched + 6 unmatched
+(7 matched lines resolve into 6 distinct SKU groups — see KNOWN LIMITATION below for why that's not always 1:1)
+
+SKU: CJ-WATCH-BLK
+  Revenue: $39.99  |  Units sold: 1.0  |  Current supplier cost/unit: $12.75
+  Supplier cost (total): $12.75
+  Contribution margin (revenue - supplier cost only): $27.24
+  Fulfillment cost: not available — requires ad-spend ingestion / fulfillment cost data, not yet built
+  Attributed ad spend: not available — requires ad-spend ingestion / fulfillment cost data, not yet built
+  Payment processing fees: not available — requires ad-spend ingestion / fulfillment cost data, not yet built
+  Sources: orders ['#S001'], invoices ['01_invoice.txt', '06_invoice.txt']
+
+SKU: GS-EARBUD-PRO
+  Revenue: $24.99  |  Units sold: 1.0  |  Current supplier cost/unit: $7.40
+  Supplier cost (total): $7.40
+  Contribution margin (revenue - supplier cost only): $17.59
+  Fulfillment cost: not available — requires ad-spend ingestion / fulfillment cost data, not yet built
+  Attributed ad spend: not available — requires ad-spend ingestion / fulfillment cost data, not yet built
+  Payment processing fees: not available — requires ad-spend ingestion / fulfillment cost data, not yet built
+  Sources: orders ['#S002'], invoices ['02_invoice.txt']
+
+SKU: CJ-MUG-01
+  Revenue: $14.99  |  Units sold: 1.0  |  Current supplier cost/unit: $5.00
+  Supplier cost (total): $5.00
+  Contribution margin (revenue - supplier cost only): $9.99
+  Fulfillment cost: not available — requires ad-spend ingestion / fulfillment cost data, not yet built
+  Attributed ad spend: not available — requires ad-spend ingestion / fulfillment cost data, not yet built
+  Payment processing fees: not available — requires ad-spend ingestion / fulfillment cost data, not yet built
+  Sources: orders ['#S005'], invoices ['05_invoice.txt']
+
+SKU: CJ-MUG-02
+  Revenue: $14.99  |  Units sold: 1.0  |  Current supplier cost/unit: $3.00
+  Supplier cost (total): $3.00
+  Contribution margin (revenue - supplier cost only): $11.99
+  Fulfillment cost: not available — requires ad-spend ingestion / fulfillment cost data, not yet built
+  Attributed ad spend: not available — requires ad-spend ingestion / fulfillment cost data, not yet built
+  Payment processing fees: not available — requires ad-spend ingestion / fulfillment cost data, not yet built
+  Sources: orders ['#S005'], invoices ['05_invoice.txt']
+
+SKU: DESC:ceramic mug white
+  Revenue: $14.99  |  Units sold: 1.0  |  Current supplier cost/unit: $5.35
+  Supplier cost (total): $5.35
+  Contribution margin (revenue - supplier cost only): $9.64
+  Fulfillment cost: not available — requires ad-spend ingestion / fulfillment cost data, not yet built
+  Attributed ad spend: not available — requires ad-spend ingestion / fulfillment cost data, not yet built
+  Payment processing fees: not available — requires ad-spend ingestion / fulfillment cost data, not yet built
+  Sources: orders ['#S005'], invoices ['07_invoice.txt']
+
+SKU: DESC:silicone phone grip - assorted colors
+  Revenue: $9.99  |  Units sold: 1.0  |  Current supplier cost/unit: $0.65
+  Supplier cost (total): $0.65
+  Contribution margin (revenue - supplier cost only): $9.34
+  Fulfillment cost: not available — requires ad-spend ingestion / fulfillment cost data, not yet built
+  Attributed ad spend: not available — requires ad-spend ingestion / fulfillment cost data, not yet built
+  Payment processing fees: not available — requires ad-spend ingestion / fulfillment cost data, not yet built
+  Sources: orders ['#S003'], invoices ['04_invoice.txt']
+
+======================================================================
+LEAKS FOUND: 1 (ranked by dollar impact)
+======================================================================
+
+[CONFIRMED] CJ-WATCH-BLK — supplier_price_drift
+  Dollar impact: $+14.00
+  unit price moved from $12.40 to $12.75 ($+0.35/unit) between 01_invoice.txt and 06_invoice.txt
+  Sources: {'baseline_invoice': '01_invoice.txt', 'new_invoice': '06_invoice.txt', 'matched_orders': ['#S001']}
+
+======================================================================
+LEAK TYPES NOT YET AVAILABLE IN THIS REPORT
+======================================================================
+  - ad_spend_drift: no Meta/TikTok ad-spend ingestion built yet — cannot attribute spend per SKU
+  - fx_leakage_on_sourcing_payout: fx-reconciliation pipeline not wired into this report yet — see .claude/skills/fx-reconciliation/SKILL.md
+
+======================================================================
+UNMATCHED INVOICE LINES (6) — no corresponding Shopify order found; cannot audit these
+======================================================================
+  01_invoice.txt: 'Smart Watch White' (sku=CJ-WATCH-WHT)
+  02_invoice.txt: 'Charging Case Only (Lot Purchase)' (sku=GS-CASE-ONLY)
+  03_invoice.txt: 'Phone case' (sku=AE-PHONE-CASE-01)
+  03_invoice.txt: 'USB-C cable' (sku=AE-CABLE-USBC)
+  03_invoice.txt: 'Screen protector' (sku=AE-SCREEN-PROT)
+  04_invoice.txt: 'Foldable Phone Stand' (sku=FG-STAND-02)
+
+======================================================================
+KNOWN LIMITATION: POSSIBLE SKU FRAGMENTATION (1)
+======================================================================
+Inconsistent supplier SKU labeling across purchases can split one product's price history across multiple resolved-SKU groups above, which means price-drift leaks on that product may go undetected. This pipeline does not guess identity across mismatched SKU labeling — see sku_fragmentation_warnings for specific cases found in this dataset.
+
+  DESC:ceramic mug white  <->  CJ-MUG-01
+  Sources (DESC:ceramic mug white): [{'invoice_file': '07_invoice.txt', 'line_item_id': 13, 'description': 'Ceramic Mug White'}]
+  Sources (CJ-MUG-01): [{'invoice_file': '05_invoice.txt', 'line_item_id': 10, 'description': 'Ceramic Mug White'}]
+  Shared order(s): [{'order_id': 4, 'order_name': '#S005'}]  |  shared variant: ['white']
+  'DESC:ceramic mug white' and 'CJ-MUG-01' both matched the same order and both describe a 'white' variant, but were kept as separate SKUs because supplier SKU labeling was inconsistent across their source invoices — verify manually whether this is one product's purchase history fragmented across two records, which would mean a price-drift leak may be going undetected
