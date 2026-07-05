@@ -13,6 +13,69 @@ export default function ProjectsSection() {
 
             <div>
                 <ul className="group/list">
+                    {/* AuditWedge Item — shown first: most current work */}
+                    <li className="mb-12">
+                        <div className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+                            <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-[20px] transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/20 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.05)] lg:group-hover:drop-shadow-lg"></div>
+
+                            {/* Icon (no designed logo yet — name was only finalized recently) */}
+                            <header className="z-10 mb-2 mt-1 xs:mb-0 sm:col-span-2">
+                                <Link href="/auditwedge">
+                                    <div className="h-16 w-16 rounded-[16px] bg-amber-500/10 flex items-center justify-center shadow-[0_2px_10px_rgba(245,158,11,0.2)] overflow-hidden hover:scale-105 transition-transform cursor-pointer">
+                                        <Scale className="h-8 w-8 text-amber-400" aria-hidden="true" />
+                                    </div>
+                                </Link>
+                            </header>
+
+                            {/* Content */}
+                            <div className="z-10 sm:col-span-6">
+                                <h3>
+                                    <Link
+                                        href="/auditwedge"
+                                        className="inline-flex items-baseline font-medium leading-tight text-[var(--text-primary)] hover:text-[var(--teal-300)] focus-visible:text-[var(--teal-300)] group/link text-base border-none mb-2"
+                                        aria-label="View AuditWedge Details"
+                                    >
+                                        <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
+                                        <span>
+                                            AuditWedge
+                                            <ArrowUpRight className="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 ml-1 translate-y-px" />
+                                        </span>
+                                    </Link>
+                                    <span className="ml-2 align-middle text-xs font-medium text-amber-400/80">
+                                        (In development)
+                                    </span>
+                                </h3>
+
+                                <p className="mt-2 text-sm leading-normal">
+                                    Reconciles supplier invoices, Shopify checkout data, and payout records at the SKU level to surface hidden margin leaks — supplier overcharges, FX markup, and fixed-fee drag on cross-border e-commerce payouts.
+                                </p>
+
+                                <ul className="mt-4 flex flex-wrap" aria-label="Technologies used">
+                                    {["Python", "Claude API", "Shopify Admin GraphQL", "SQLite"].map((tech) => (
+                                        <li key={tech} className="mr-1.5 mt-2">
+                                            <div className="flex items-center rounded-full bg-[var(--teal-400)]/10 px-3 py-1 text-xs font-medium leading-5 text-[var(--teal-300)]">
+                                                {tech}
+                                            </div>
+                                        </li>
+                                    ))}
+                                </ul>
+
+                                <div className="mt-6">
+                                    <a
+                                        href="/sku-margin-audit-sample-report.txt"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="relative z-10 inline-flex items-center gap-2 rounded-lg bg-amber-500/10 px-4 py-2 text-sm font-medium text-amber-400 hover:bg-amber-500/20 transition-colors focus-ring"
+                                        aria-label="View AuditWedge sample audit report"
+                                    >
+                                        <FileText className="h-4 w-4" aria-hidden="true" />
+                                        View sample report
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
                     {/* GeoLens Item */}
                     <li className="mb-12">
                         <div className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
@@ -133,69 +196,6 @@ export default function ProjectsSection() {
                                             alt="Download on the App Store"
                                             className="h-10 w-auto"
                                         />
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                    {/* AuditWedge Item */}
-                    <li className="mb-12">
-                        <div className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
-                            <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-[20px] transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/20 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.05)] lg:group-hover:drop-shadow-lg"></div>
-
-                            {/* Icon (no designed logo yet — name was only finalized recently) */}
-                            <header className="z-10 mb-2 mt-1 xs:mb-0 sm:col-span-2">
-                                <Link href="/auditwedge">
-                                    <div className="h-16 w-16 rounded-[16px] bg-amber-500/10 flex items-center justify-center shadow-[0_2px_10px_rgba(245,158,11,0.2)] overflow-hidden hover:scale-105 transition-transform cursor-pointer">
-                                        <Scale className="h-8 w-8 text-amber-400" aria-hidden="true" />
-                                    </div>
-                                </Link>
-                            </header>
-
-                            {/* Content */}
-                            <div className="z-10 sm:col-span-6">
-                                <h3>
-                                    <Link
-                                        href="/auditwedge"
-                                        className="inline-flex items-baseline font-medium leading-tight text-[var(--text-primary)] hover:text-[var(--teal-300)] focus-visible:text-[var(--teal-300)] group/link text-base border-none mb-2"
-                                        aria-label="View AuditWedge Details"
-                                    >
-                                        <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
-                                        <span>
-                                            AuditWedge
-                                            <ArrowUpRight className="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 ml-1 translate-y-px" />
-                                        </span>
-                                    </Link>
-                                    <span className="ml-2 align-middle text-xs font-medium text-amber-400/80">
-                                        (In development)
-                                    </span>
-                                </h3>
-
-                                <p className="mt-2 text-sm leading-normal">
-                                    Reconciles supplier invoices, Shopify checkout data, and payout records at the SKU level to surface hidden margin leaks — supplier overcharges, FX markup, and fixed-fee drag on cross-border e-commerce payouts.
-                                </p>
-
-                                <ul className="mt-4 flex flex-wrap" aria-label="Technologies used">
-                                    {["Python", "Claude API", "Shopify Admin GraphQL", "SQLite"].map((tech) => (
-                                        <li key={tech} className="mr-1.5 mt-2">
-                                            <div className="flex items-center rounded-full bg-[var(--teal-400)]/10 px-3 py-1 text-xs font-medium leading-5 text-[var(--teal-300)]">
-                                                {tech}
-                                            </div>
-                                        </li>
-                                    ))}
-                                </ul>
-
-                                <div className="mt-6">
-                                    <a
-                                        href="/sku-margin-audit-sample-report.txt"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="relative z-10 inline-flex items-center gap-2 rounded-lg bg-amber-500/10 px-4 py-2 text-sm font-medium text-amber-400 hover:bg-amber-500/20 transition-colors focus-ring"
-                                        aria-label="View AuditWedge sample audit report"
-                                    >
-                                        <FileText className="h-4 w-4" aria-hidden="true" />
-                                        View sample report
                                     </a>
                                 </div>
                             </div>
