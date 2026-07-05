@@ -9,8 +9,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Preet Panchal — iOS Developer",
-  description: "iOS Developer & App Creator building beautiful, privacy-first software.",
+  title: "Preet Panchal — Builder",
+  description: "I build software that respects the people who use it — from privacy-first iOS apps to trust-first business tools.",
 };
 
 export default function RootLayout({
