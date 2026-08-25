@@ -79,7 +79,7 @@ export default function GeoLensPage() {
                                 <p>Site: Sabarmati Riverfront, Ahmedabad</p>
                                 <p>23.02250° N, 72.57140° E ±5m</p>
                                 <p>2026-06-11 10:42:57 GMT+5:30</p>
-                                <p>Alt 46m · E 80° · 35°C Mostly Clear</p>
+                                <p>Alt 53m · E 80° · 35°C Mostly Clear</p>
                                 <p>By: Preet Panchal</p>
                             </div>
                         </div>
