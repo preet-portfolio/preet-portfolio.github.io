@@ -3,7 +3,7 @@ import { ArrowLeft } from "lucide-react";
 
 export const metadata = {
     title: "GeoLens — Privacy Policy",
-    description: "GeoLens privacy policy: no data collection, no servers, no trackers. Everything stays on your device.",
+    description: "GeoLens privacy policy: no data collection, no servers, no trackers. Your photos and location never reach us.",
 };
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
@@ -28,11 +28,11 @@ export default function GeoLensPrivacyPage() {
 
                 <header className="mb-12">
                     <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-200 mb-2">GeoLens Privacy Policy</h1>
-                    <p className="text-sm text-slate-500">Last updated: June 11, 2026</p>
+                    <p className="text-sm text-slate-500">Last updated: August 25, 2026</p>
                 </header>
 
                 <p className="text-lg text-slate-300 leading-relaxed mb-12">
-                    GeoLens is built so that your data never leaves your device.
+                    GeoLens has no servers. We never receive your photos, your location, or your name.
                 </p>
 
                 <Section title="What GeoLens accesses, and why">
@@ -51,6 +51,35 @@ export default function GeoLensPrivacyPage() {
                         Nothing. GeoLens has no servers, no analytics, no advertising, and no trackers. Your photos, location history,
                         site labels, and name are stored on your device — and, for the free-tier capture counter, in your personal iCloud
                         under your Apple ID, which is inaccessible to us.
+                    </p>
+                </Section>
+
+                <Section title="How your data is protected on the device">
+                    <ul className="list-disc pl-5 space-y-3">
+                        <li>
+                            Stamped photos and their metadata are written with iOS <strong className="text-slate-300">Complete Protection</strong>,
+                            meaning they are encrypted and unreadable while your device is locked.
+                        </li>
+                        <li>
+                            Your verified name and your attested site (its label and coordinates) are stored in the{" "}
+                            <strong className="text-slate-300">iOS Keychain</strong>, restricted to this device and not included in any backup.
+                        </li>
+                    </ul>
+                </Section>
+
+                <Section title="Device backups">
+                    <p>
+                        If you use iCloud Backup or back your device up to a computer, GeoLens&apos;s on-device data — your in-app capture
+                        gallery and its metadata — is included in that backup, like any other app&apos;s data. Those backups belong to you and
+                        are protected by your Apple ID and your backup encryption settings. <strong className="text-slate-300">We have no
+                        access to them.</strong>
+                    </p>
+                    <p>
+                        If you prefer GeoLens data not to be backed up at all, you can turn GeoLens off in Settings → [your name] → iCloud →
+                        Manage Storage → Backups.
+                    </p>
+                    <p>
+                        Stamped photos you save to your photo library are covered by your Photos backup settings, not by GeoLens.
                     </p>
                 </Section>
 
