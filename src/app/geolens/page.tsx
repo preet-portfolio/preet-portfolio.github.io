@@ -76,10 +76,10 @@ export default function GeoLensPage() {
                             </div>
                             <div className="min-w-0">
                                 <p className="text-sky-300 font-semibold mb-0.5">◆ GeoLens</p>
-                                <p>Site: Ambe Village, Anand 388320</p>
-                                <p>22.55172° N, 72.98535° E ±5m</p>
+                                <p>Site: Sabarmati Riverfront, Ahmedabad</p>
+                                <p>23.02250° N, 72.57140° E ±5m</p>
                                 <p>2026-06-11 10:42:57 GMT+5:30</p>
-                                <p>Alt 46m · E 80° · 35°C Mostly Clear</p>
+                                <p>Alt 53m · E 80° · 35°C Mostly Clear</p>
                                 <p>By: Preet Panchal</p>
                             </div>
                         </div>
