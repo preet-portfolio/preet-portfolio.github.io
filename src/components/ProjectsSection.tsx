@@ -1,4 +1,4 @@
-import { ArrowUpRight, Scale, FileText } from "lucide-react";
+import { ArrowUpRight, Scale, FileText, Shrink } from "lucide-react";
 import Link from "next/link"; // Added Next.js Link
 
 export default function ProjectsSection() {
@@ -72,6 +72,59 @@ export default function ProjectsSection() {
                                         View sample report
                                     </a>
                                 </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    {/* Deflate Item — in development, submission imminent */}
+                    <li className="mb-12">
+                        <div className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+                            <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-[20px] transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/20 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.05)] lg:group-hover:drop-shadow-lg"></div>
+
+                            {/* Icon (app icon still being designed — same treatment as AuditWedge) */}
+                            <header className="z-10 mb-2 mt-1 xs:mb-0 sm:col-span-2">
+                                <Link href="/deflate">
+                                    <div className="h-16 w-16 rounded-[16px] bg-violet-500/10 flex items-center justify-center shadow-[0_2px_10px_rgba(91,61,245,0.2)] overflow-hidden hover:scale-105 transition-transform cursor-pointer">
+                                        <Shrink className="h-8 w-8 text-violet-400" aria-hidden="true" />
+                                    </div>
+                                </Link>
+                            </header>
+
+                            {/* Content */}
+                            <div className="z-10 sm:col-span-6">
+                                <h3>
+                                    <Link
+                                        href="/deflate"
+                                        className="inline-flex items-baseline font-medium leading-tight text-[var(--text-primary)] hover:text-[var(--teal-300)] focus-visible:text-[var(--teal-300)] group/link text-base border-none mb-2"
+                                        aria-label="View Deflate Details"
+                                    >
+                                        <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
+                                        <span>
+                                            Deflate
+                                            <ArrowUpRight className="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 ml-1 translate-y-px" />
+                                        </span>
+                                    </Link>
+                                    <span className="ml-2 align-middle text-xs font-medium text-violet-400/80">
+                                        (In development)
+                                    </span>
+                                </h3>
+
+                                <p className="mt-2 text-sm leading-normal">
+                                    Compresses a PDF or image down to a size you name in kilobytes — the number an upload form
+                                    actually asked for — then reports honestly what it reached instead of faking success or
+                                    silently ruining the page. Also merges, splits, rotates, crops, and makes scans searchable.
+                                    No networking code anywhere in the app.
+                                </p>
+
+                                <ul className="mt-4 flex flex-wrap" aria-label="Technologies used">
+                                    {["Swift", "SwiftUI", "PDFKit", "Vision", "Core Image", "ImageIO"].map((tech) => (
+                                        <li key={tech} className="mr-1.5 mt-2">
+                                            <div className="flex items-center rounded-full bg-[var(--teal-400)]/10 px-3 py-1 text-xs font-medium leading-5 text-[var(--teal-300)]">
+                                                {tech}
+                                            </div>
+                                        </li>
+                                    ))}
+                                </ul>
                             </div>
                         </div>
                     </li>
