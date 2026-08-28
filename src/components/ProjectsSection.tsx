@@ -110,10 +110,11 @@ export default function ProjectsSection() {
                                 </h3>
 
                                 <p className="mt-2 text-sm leading-normal">
-                                    Compresses a PDF or image down to a size you name in kilobytes — the number an upload form
+                                    Compresses PDFs and photos down to a size named in kilobytes — the number an upload form
                                     actually asked for — then reports honestly what it reached instead of faking success or
-                                    silently ruining the page. Also merges, splits, rotates, crops, and makes scans searchable.
-                                    No networking code anywhere in the app.
+                                    silently ruining the page. Crops passport and signature photos to exact spec, makes scans
+                                    searchable with on-device OCR, and merges, splits and rotates the rest. Contains no
+                                    networking code at all.
                                 </p>
 
                                 <ul className="mt-4 flex flex-wrap" aria-label="Technologies used">

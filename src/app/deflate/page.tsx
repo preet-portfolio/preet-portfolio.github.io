@@ -1,10 +1,10 @@
 import Link from "next/link";
-import { ArrowLeft, Shrink, Scale, FileText, Layers, Lock, LifeBuoy } from "lucide-react";
+import { ArrowLeft, Shrink, Scale, FileText, Layers, Lock, LifeBuoy, Crop, ScanText } from "lucide-react";
 
 export const metadata = {
-    title: "Deflate | Compress a PDF to an Exact Size",
+    title: "Deflate | PDFs and Photos, at the Size You Were Asked For",
     description:
-        "Deflate compresses PDFs and images down to a size you name in KB, then tells you honestly what it reached. Merge, split, rotate, crop, and make scans searchable — entirely on device, with no network code at all.",
+        "Deflate compresses PDFs and images down to a size you name in kilobytes, then tells you honestly what it reached. Crop a passport photo to spec, make a scan searchable, merge, split, rotate — entirely on device, with no network code at all.",
 };
 
 export default function DeflatePage() {
@@ -35,15 +35,18 @@ export default function DeflatePage() {
                         </div>
                         <div>
                             <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-slate-200 mb-3">Deflate</h1>
-                            <p className="text-xl sm:text-2xl text-slate-400 font-light tracking-tight">Compress a PDF to an Exact Size</p>
+                            <p className="text-xl sm:text-2xl text-slate-400 font-light tracking-tight">PDFs and photos, at the size you were asked for</p>
                         </div>
                     </div>
 
+                    <p className="text-lg leading-relaxed text-slate-400 max-w-2xl mb-6">
+                        The form said under 200 KB. Your scan is 9 MB. Your passport photo has to be 35×45 mm and under
+                        50 KB, and the upload button greys out until it is.
+                    </p>
                     <p className="text-lg leading-relaxed text-slate-400 max-w-2xl mb-8">
-                        Upload forms ask for a number: under 200 KB, under 500 KB, under 1 MB. Most compressors offer
-                        &ldquo;low, medium, high&rdquo; and leave you guessing. Deflate takes the number you were actually given,
-                        works toward it, and then tells you the truth about what it reached — because a file that went from
-                        9.6&nbsp;MB to 187&nbsp;KB is a useful result even when you asked for 40.
+                        Nobody gave you a quality slider. They gave you a <em className="text-slate-300">number</em>. Deflate
+                        is built around that number — for PDFs and photos alike — and it is honest with you about the one
+                        thing every other compressor quietly lies about: whether it actually got there.
                     </p>
 
                     <div className="flex flex-wrap items-center gap-4">
@@ -98,8 +101,9 @@ export default function DeflatePage() {
                             </div>
                             <h3 className="text-xl font-medium text-slate-200 mb-3">A Target in Kilobytes</h3>
                             <p className="text-slate-400 leading-relaxed text-sm">
-                                Choose JPEG or PDF, then pick a size the way the form asked for it — a preset chip or your own
-                                number in KB. Not &ldquo;high quality&rdquo;. Not a slider. The figure you were actually given.
+                                Works on PDFs <em>and</em> photos. Choose your output — JPEG or PDF — then pick a size the way
+                                the form asked for it: 20, 50, 100, 200 KB and up, or type your own number. Not &ldquo;high
+                                quality&rdquo;. Not a slider. The figure you were actually given.
                             </p>
                         </div>
 
@@ -129,13 +133,38 @@ export default function DeflatePage() {
 
                         <div className="group relative rounded-2xl bg-slate-800/20 border border-slate-700/50 p-6 md:p-8 transition-colors hover:bg-slate-800/40">
                             <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-violet-400/10 text-violet-300">
+                                <Crop className="h-6 w-6" />
+                            </div>
+                            <h3 className="text-xl font-medium text-slate-200 mb-3">Photos, Cut to Spec</h3>
+                            <p className="text-slate-400 leading-relaxed text-sm">
+                                Passport 35×45 mm, signature strip, square, or freeform. Drag the box, and Deflate crops to the
+                                exact pixel dimensions at 300 dpi — then hits your target KB <em>without</em> shrinking the
+                                photo below the size the form demands. Getting both right at once is the whole trick.
+                            </p>
+                        </div>
+
+                        <div className="group relative rounded-2xl bg-slate-800/20 border border-slate-700/50 p-6 md:p-8 transition-colors hover:bg-slate-800/40">
+                            <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-violet-400/10 text-violet-300">
+                                <ScanText className="h-6 w-6" />
+                            </div>
+                            <h3 className="text-xl font-medium text-slate-200 mb-3">Scans That Can Be Searched</h3>
+                            <p className="text-slate-400 leading-relaxed text-sm">
+                                Make Searchable reads the text in a scan and lays an invisible, selectable layer over it. The
+                                page looks identical — but now it&apos;s findable, and the text can be copied out. Recognition
+                                runs on your device; nothing is sent anywhere to be read.
+                            </p>
+                        </div>
+
+                        <div className="group relative rounded-2xl bg-slate-800/20 border border-slate-700/50 p-6 md:p-8 transition-colors hover:bg-slate-800/40">
+                            <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-violet-400/10 text-violet-300">
                                 <Layers className="h-6 w-6" />
                             </div>
-                            <h3 className="text-xl font-medium text-slate-200 mb-3">The Rest of the Job</h3>
+                            <h3 className="text-xl font-medium text-slate-200 mb-3">The Rest of the Paperwork</h3>
                             <p className="text-slate-400 leading-relaxed text-sm">
-                                Merge several files into one, split pages out, rotate and reorder, crop a photo to a passport or
-                                signature size, and make a scan searchable with an invisible on-device text layer. The whole
-                                document chore, in one place.
+                                Merge files into one. Pull a page range out to its own PDF, or split every page into its own
+                                file. Rotate and drag pages into the right order. Turn a pile of photos into a single PDF, one
+                                page each — with phone shots landing the right way up, because Deflate reads their orientation
+                                instead of ignoring it.
                             </p>
                         </div>
                     </div>
