@@ -38,7 +38,7 @@ export default function DeflateSupportPage() {
 
                 <header className="mb-12">
                     <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-200 mb-2">Deflate Support</h1>
-                    <p className="text-sm text-slate-500">iPhone · iPad · Mac</p>
+                    <p className="text-sm text-slate-500">iPhone & Mac</p>
                 </header>
 
                 <p className="text-lg text-slate-300 leading-relaxed mb-12">

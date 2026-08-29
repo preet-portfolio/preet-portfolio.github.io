@@ -54,7 +54,7 @@ export default function DeflatePage() {
                             In development
                         </span>
                         <span className="inline-flex items-center rounded-full bg-violet-500/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-violet-300">
-                            iPhone · iPad · Mac
+                            iPhone & Mac
                         </span>
                         <span className="inline-flex items-center rounded-full bg-violet-500/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-violet-300">
                             Zero Data Collection
