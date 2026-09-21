@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# preet-portfolio.github.io
 
-## Getting Started
+Preet Panchal's iOS developer portfolio, live at <https://preet-portfolio.github.io>. It is also
+where the apps' public pages live: each app has a showcase page, and the ones on the App Store
+have a privacy policy, terms and support page that App Store Connect links to.
 
-First, run the development server:
+## Stack
+Next.js 16 (App Router) with React 19, Tailwind CSS 4, framer-motion and lucide-react. It is
+exported as a fully static site (`output: "export"`, `trailingSlash: true`, unoptimized images),
+so there is no server and nothing to configure at runtime.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Run and build
+```sh
+npm ci
+npm run dev      # http://localhost:3000
+npm run build    # static site into ./out; this is what CI runs
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Layout
+| Path | What it is |
+|---|---|
+| `src/app/page.tsx` | The home page |
+| `src/components/ProjectsSection.tsx` | The project cards on the home page, newest first |
+| `src/app/<project>/page.tsx` | One showcase page per app (`geolens`, `deflate`, `docfort`, `auditwedge`) |
+| `src/app/geolens/privacy`, `terms` | GeoLens's privacy policy and terms of use, linked from the App Store |
+| `src/app/deflate/privacy`, `support` | Deflate's privacy policy and support page |
+| `public/` | Icons and images served as-is |
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+To add a project: create `src/app/<name>/page.tsx`, add a card to `ProjectsSection.tsx`, and put
+its icon in `public/`.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deploying
+Every push to `main` runs `.github/workflows/deploy.yml`, which builds the site and publishes
+`./out` to GitHub Pages. Work on a branch and open a pull request; merging it deploys.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Ground rules
+- **This repo is public.** Never commit personal data, credentials, keys or promo codes.
+- **A page never claims what the shipped app can't do.** Describe a feature or platform only
+  once it is live on the App Store, not while it is in review.
+- **The privacy policies are promises.** Change them only in step with what the app really does
+  (GeoLens's policy also exists as `PRIVACY.md` in the app's repo).
+- More detail for Claude Code is in [`CLAUDE.md`](CLAUDE.md).
