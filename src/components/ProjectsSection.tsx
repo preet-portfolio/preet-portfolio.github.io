@@ -161,7 +161,7 @@ export default function ProjectsSection() {
                                 </h3>
 
                                 <p className="mt-2 text-sm leading-normal">
-                                    An evidence-grade geotagging camera for surveyors, valuers, and field inspectors. Every photo carries a burned-in stamp — coordinates, address, map tile, timestamp, and operator identity — plus a verifiable EXIF audit trail. Zero data collection.
+                                    An evidence-grade geotagging camera for surveyors, valuers, and field inspectors. Every photo carries a burned-in stamp — coordinates, address, map tile, timestamp, and operator name — plus a verifiable EXIF audit trail. Zero data collection.
                                 </p>
 
                                 <ul className="mt-4 flex flex-wrap" aria-label="Technologies used">

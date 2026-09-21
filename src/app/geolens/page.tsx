@@ -39,7 +39,7 @@ export default function GeoLensPage() {
                     <p className="text-lg leading-relaxed text-slate-400 max-w-2xl mb-8">
                         Surveyors, property valuers, loan officers, and field inspectors need undeniable proof that they were at a place at a time.
                         GeoLens burns that proof into every photo — coordinates, address, a map of the exact spot, timestamp, and the operator's
-                        verified identity — and embeds a machine-readable EXIF audit trail that banks and agencies can check.
+                        name — and embeds a machine-readable EXIF audit trail that banks and agencies can check.
                     </p>
 
                     <div className="flex flex-wrap items-center gap-4">
@@ -112,7 +112,7 @@ export default function GeoLensPage() {
                             <h3 className="text-xl font-medium text-slate-200 mb-3">Dual Audit Trail</h3>
                             <p className="text-slate-400 leading-relaxed text-sm">
                                 Human-readable proof in the pixels, machine-readable proof in the metadata: GPS coordinates with accuracy,
-                                UTC-correct timestamps, operator identity in the EXIF Artist field. Strip one layer and the other survives.
+                                UTC-correct timestamps, the operator name in the EXIF Artist field. Strip one layer and the other survives.
                             </p>
                         </div>
 
@@ -133,8 +133,9 @@ export default function GeoLensPage() {
                             </div>
                             <h3 className="text-xl font-medium text-slate-200 mb-3">White-Label for Professionals</h3>
                             <p className="text-slate-400 leading-relaxed text-sm">
-                                Agencies put their own logo on every stamp for fully branded client deliverables. Free tier includes
-                                5 captures monthly; Premium unlocks unlimited full-resolution captures with advanced metadata.
+                                With Pro, agencies put their own logo on every stamp for fully branded client deliverables. The free tier
+                                includes 5 captures a month; Premium unlocks unlimited full-resolution captures with advanced metadata,
+                                custom colors and fonts.
                             </p>
                         </div>
                     </div>
