@@ -4,7 +4,7 @@ import { ArrowLeft, Camera, Vibrate, Hand, Images, Lock, FileText, Mail } from "
 export const metadata = {
     title: "Agitate | Shake to Develop",
     description:
-        "Agitate turns your iPhone into an instant camera. Take a photo, watch it print as a blank film card, then shake your phone to develop it. Everything stays on your device.",
+        "Agitate turns your iPhone into an instant camera. Take a photo, watch it print as a blank film card, then shake your phone to develop it. Everything stays on your device. Available on the App Store.",
 };
 
 export default function AgitatePage() {
@@ -46,9 +46,19 @@ export default function AgitatePage() {
                     </p>
 
                     <div className="flex flex-wrap items-center gap-4">
-                        <span className="inline-flex items-center rounded-full bg-orange-500/15 px-4 py-1.5 text-xs font-semibold tracking-wide text-orange-300">
-                            In beta
-                        </span>
+                        <a
+                            href="https://apps.apple.com/app/id6823962224"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block focus-ring rounded-lg transition-transform hover:scale-105"
+                            aria-label="Download Agitate on the App Store"
+                        >
+                            <img
+                                src="/app-store-badge-black.svg"
+                                alt="Download on the App Store"
+                                className="h-11 w-auto"
+                            />
+                        </a>
                         <span className="inline-flex items-center rounded-full bg-orange-500/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-orange-300">
                             iPhone
                         </span>
@@ -135,18 +145,22 @@ export default function AgitatePage() {
                         working:
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
-                        <Link
-                            href="/agitate/privacy"
+                        <a
+                            href="https://preet-portfolio.github.io/agitate-support/privacy.html"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-orange-500/10 text-orange-300 font-medium hover:bg-orange-500/20 transition-colors focus-ring"
                         >
                             <Lock className="w-4 h-4" /> Privacy Policy
-                        </Link>
-                        <Link
-                            href="/agitate/terms"
+                        </a>
+                        <a
+                            href="https://preet-portfolio.github.io/agitate-support/terms.html"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-orange-500/10 text-orange-300 font-medium hover:bg-orange-500/20 transition-colors focus-ring"
                         >
                             <FileText className="w-4 h-4" /> Terms of Use
-                        </Link>
+                        </a>
                         <a
                             href="mailto:preet2020@icloud.com?subject=Agitate%20support"
                             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-orange-500/10 text-orange-300 font-medium hover:bg-orange-500/20 transition-colors focus-ring"
