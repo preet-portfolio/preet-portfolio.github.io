@@ -11,7 +11,7 @@ const navLink = "p-3 text-[#5C5C58] no-underline hover:text-[#E5480B]";
 export default function Home() {
   return (
     <div
-      className={`${geist.variable} ${geistMono.variable} ${instrumentSerif.variable} min-h-screen overflow-hidden bg-[#F4F3EF] text-[#0A0A0A] [--font-mono:var(--font-geist-mono)] [--font-sans:var(--font-geist)] [--font-serif:var(--font-instrument)] font-sans`}
+      className={`${geist.variable} ${geistMono.variable} ${instrumentSerif.variable} min-h-screen overflow-x-clip bg-[#F4F3EF] text-[#0A0A0A] [--font-mono:var(--font-geist-mono)] [--font-sans:var(--font-geist)] [--font-serif:var(--font-instrument)] font-sans`}
     >
       <header className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between gap-3 px-6 py-7 font-mono text-[13px] text-[#5C5C58]">
         <span>PP — {new Date().getFullYear()}</span>

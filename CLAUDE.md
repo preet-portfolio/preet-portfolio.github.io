@@ -12,6 +12,7 @@ pages. See `README.md` for the stack, layout and commands.
   live on the App Store. While a version is in review, the page keeps describing the live one.
 - **Privacy policies must match the app.** Edit `src/app/geolens/privacy/page.tsx` in step with
   `PRIVACY.md` in the GeoLens repo, and `src/app/deflate/privacy/page.tsx` with Deflate's.
+  Agitate's privacy policy and terms live only in the agitate-support site; link there.
   Update "Last updated" when you change one.
 - **Operator name, not "verified identity".** GeoLens's name field can be typed, so copy says
   "name".
@@ -30,6 +31,7 @@ pages. See `README.md` for the stack, layout and commands.
 ## Apps linked from here
 | App | Status | App Store |
 |---|---|---|
+| Agitate | Live (1.0) as of 2026-10-21; 1.1 submitted for review | id 6823962224 |
 | GeoLens | Live (1.1); 1.2 in review as of 2026-09-21 | id 6779347733 |
 | Deflate | See the page for its current state | — |
 | DocFort, AuditWedge | See their pages | — |
