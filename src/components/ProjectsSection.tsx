@@ -1,463 +1,93 @@
-import { ArrowUpRight, Scale, FileText, Shrink, Play, BookOpen, Code2 } from "lucide-react";
-import Link from "next/link"; // Added Next.js Link
+"use client";
+
+import { useState } from "react";
+import Link from "next/link";
+
+type Project = {
+    id: string;
+    name: string;
+    status: string;
+    href: string;
+    line: string;
+    icon?: string;
+    tile?: string;
+};
+
+// Newest work first. Only describe what the version live on the App Store does.
+const apps: Project[] = [
+    { id: "agitate", name: "Agitate", status: "App Store", href: "/agitate", icon: "/agitate-logo.png", line: "An instant camera. Every photo prints blank, and you shake your phone to develop it." },
+    { id: "auditwedge", name: "AuditWedge", status: "in progress", href: "/auditwedge", tile: "#0A0A0A", line: "Shows online stores where money slips away on every cross-border order." },
+    { id: "deflate", name: "Deflate", status: "in progress", href: "/deflate", tile: "#5B3DF5", line: "Shrinks a PDF or photo to the exact size an upload form asks for." },
+    { id: "geolens", name: "GeoLens", status: "App Store", href: "/geolens", icon: "/geolens-logo.png", line: "A camera that stamps every photo with where and when it was taken." },
+    { id: "docfort", name: "DocFort", status: "App Store", href: "/docfort", icon: "/docfort-logo.png", line: "A safe place for the documents you can’t lose. Collects nothing." },
+];
+
+// Pieces that live on the web rather than the App Store.
+const creative: Project[] = [
+    { id: "hand", name: "The Hand Inside the Equation", status: "web", href: "/interactive-media-gallery", icon: "/interactive-media-gallery/icon.png", line: "Paper marbling, a black hole’s light and your own camera, each rebuilt from its maths." },
+    { id: "wake", name: "wake", status: "web", href: "/wake", icon: "/wake/icon.png", line: "A living drawing instrument: thousands of lines moving through fields of force." },
+];
 
 export default function ProjectsSection() {
+    const [activeId, setActiveId] = useState(apps[0].id);
+    const active = [...apps, ...creative].find((p) => p.id === activeId) ?? apps[0];
+
+    const list = (items: Project[], serif: boolean) => (
+        <ul>
+            {items.map((item) => {
+                const on = item.id === activeId;
+                return (
+                    <li key={item.id}>
+                        <Link
+                            href={item.href}
+                            onPointerEnter={() => setActiveId(item.id)}
+                            onFocus={() => setActiveId(item.id)}
+                            className={`flex items-baseline justify-between gap-4 border-b border-[#DEDDD8] py-3.5 no-underline transition-all duration-300 motion-reduce:transition-none text-[#0A0A0A] ${on ? "md:pl-6 md:text-[#E5480B]" : ""}`}
+                        >
+                            <span
+                                className={
+                                    serif
+                                        ? "font-serif text-[clamp(36px,5vw,72px)] italic leading-none tracking-[-0.02em]"
+                                        : "text-[clamp(40px,6vw,84px)] font-medium leading-none tracking-[-0.05em]"
+                                }
+                            >
+                                {item.name}
+                            </span>
+                            <span className="whitespace-nowrap font-mono text-xs text-[#5C5C58]">{item.status}</span>
+                        </Link>
+                        {/* No hover on phones, so the line sits under the name instead of in the side card. */}
+                        <p className="mt-2 mb-4 text-sm text-[#5C5C58] md:hidden">{item.line}</p>
+                    </li>
+                );
+            })}
+        </ul>
+    );
+
     return (
-        <section id="projects" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-32 lg:scroll-mt-24">
-            {/* Mobile Sticky Header */}
-            <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-[var(--bg-primary)]/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
-                <h2 className="text-sm font-bold uppercase tracking-widest text-[var(--text-primary)]">
-                    Projects
-                </h2>
+        <section id="work" className="mx-auto flex max-w-screen-xl scroll-mt-10 flex-wrap items-start gap-12 px-6 pb-16 pt-28 md:pb-36">
+            <div className="min-w-0 flex-[1_1_560px]">
+                <h2 className="mb-6 font-mono text-[13px] font-normal tracking-normal text-[#5C5C58]">Apps</h2>
+                {list(apps, false)}
+
+                <h2 id="creative" className="mb-6 mt-24 scroll-mt-10 font-mono text-[13px] font-normal tracking-normal text-[#5C5C58]">Creative</h2>
+                {list(creative, true)}
             </div>
 
-            <div>
-                <ul className="group/list">
-                    {/* Agitate Item — newest work, live on the App Store */}
-                    <li className="mb-12">
-                        <div className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
-                            <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-[20px] transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/20 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.05)] lg:group-hover:drop-shadow-lg"></div>
-
-                            {/* App Icon */}
-                            <header className="z-10 mb-2 mt-1 xs:mb-0 sm:col-span-2">
-                                <Link href="/agitate">
-                                    <div className="h-16 w-16 rounded-[16px] flex items-center justify-center shadow-[0_2px_10px_rgba(217,72,31,0.25)] overflow-hidden hover:scale-105 transition-transform cursor-pointer">
-                                        <img src="/agitate-logo.png" alt="Agitate App Icon" className="w-full h-full object-cover" />
-                                    </div>
-                                </Link>
-                            </header>
-
-                            {/* Content */}
-                            <div className="z-10 sm:col-span-6">
-                                <h3>
-                                    <Link
-                                        href="/agitate"
-                                        className="inline-flex items-baseline font-medium leading-tight text-[var(--text-primary)] hover:text-[var(--teal-300)] focus-visible:text-[var(--teal-300)] group/link text-base border-none mb-2"
-                                        aria-label="View Agitate Details"
-                                    >
-                                        <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
-                                        <span>
-                                            Agitate
-                                            <ArrowUpRight className="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 ml-1 translate-y-px" />
-                                        </span>
-                                    </Link>
-                                </h3>
-
-                                <p className="mt-2 text-sm leading-normal">
-                                    An instant camera for iPhone. Every photo prints as a blank film card, and you shake the
-                                    phone to develop it — a motion-sensor shake detector drives a Metal-rendered development,
-                                    with haptics you can feel as the image comes through. No network code, no data collected.
-                                </p>
-
-                                <ul className="mt-4 flex flex-wrap" aria-label="Technologies used">
-                                    {["Swift", "SwiftUI", "AVFoundation", "Core Motion", "Metal", "Core Haptics"].map((tech) => (
-                                        <li key={tech} className="mr-1.5 mt-2">
-                                            <div className="flex items-center rounded-full bg-[var(--teal-400)]/10 px-3 py-1 text-xs font-medium leading-5 text-[var(--teal-300)]">
-                                                {tech}
-                                            </div>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-
-                    {/* The Hand Inside the Equation — a live web gallery, not an App Store app */}
-                    <li className="mb-12">
-                        <div className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
-                            <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-[20px] transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/20 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.05)] lg:group-hover:drop-shadow-lg"></div>
-
-                            {/* Icon: a detail rendered by the gallery's first study */}
-                            <header className="z-10 mb-2 mt-1 xs:mb-0 sm:col-span-2">
-                                <Link href="/interactive-media-gallery">
-                                    <div className="h-16 w-16 rounded-[16px] flex items-center justify-center shadow-[0_2px_10px_rgba(234,88,12,0.25)] overflow-hidden hover:scale-105 transition-transform cursor-pointer">
-                                        <img src="/interactive-media-gallery/icon.png" alt="Detail of a marbled pattern from the gallery" className="w-full h-full object-cover" />
-                                    </div>
-                                </Link>
-                            </header>
-
-                            {/* Content */}
-                            <div className="z-10 sm:col-span-6">
-                                <h3>
-                                    <Link
-                                        href="/interactive-media-gallery"
-                                        className="inline-flex items-baseline font-medium leading-tight text-[var(--text-primary)] hover:text-[var(--teal-300)] focus-visible:text-[var(--teal-300)] group/link text-base border-none mb-2"
-                                        aria-label="View The Hand Inside the Equation details"
-                                    >
-                                        <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
-                                        <span>
-                                            The Hand Inside the Equation
-                                            <ArrowUpRight className="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 ml-1 translate-y-px" />
-                                        </span>
-                                    </Link>
-                                    <span className="ml-2 align-middle text-xs font-medium text-orange-300/80">
-                                        (Live on the web)
-                                    </span>
-                                </h3>
-
-                                <p className="mt-2 text-sm leading-normal">
-                                    A live gallery of interactive media studies that hand the equation back to you: paper marbling
-                                    rebuilt from its maths, light bending around a black hole, and your own camera drawn only in
-                                    letters. Each study runs its maths live on the GPU and is checked against an independent
-                                    Python reference.
-                                </p>
-
-                                <ul className="mt-4 flex flex-wrap" aria-label="Technologies used">
-                                    {["TypeScript", "Next.js", "WebGL2", "Three.js", "Python"].map((tech) => (
-                                        <li key={tech} className="mr-1.5 mt-2">
-                                            <div className="flex items-center rounded-full bg-[var(--teal-400)]/10 px-3 py-1 text-xs font-medium leading-5 text-[var(--teal-300)]">
-                                                {tech}
-                                            </div>
-                                        </li>
-                                    ))}
-                                </ul>
-
-                                <div className="mt-6 flex flex-wrap gap-2">
-                                    <a
-                                        href="https://interactive-media-gallery.vercel.app"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="relative z-10 inline-flex items-center gap-2 rounded-lg bg-orange-500/10 px-4 py-2 text-sm font-medium text-orange-300 hover:bg-orange-500/20 transition-colors focus-ring"
-                                        aria-label="Open the gallery (opens the live site)"
-                                    >
-                                        <Play className="h-4 w-4" aria-hidden="true" />
-                                        Open the gallery
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                    {/* wake Item — a live web piece, not an App Store app */}
-                    <li className="mb-12">
-                        <div className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
-                            <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-[20px] transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/20 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.05)] lg:group-hover:drop-shadow-lg"></div>
-
-                            {/* Icon: a frame rendered by wake itself */}
-                            <header className="z-10 mb-2 mt-1 xs:mb-0 sm:col-span-2">
-                                <Link href="/wake">
-                                    <div className="h-16 w-16 rounded-[16px] flex items-center justify-center shadow-[0_2px_10px_rgba(129,140,248,0.25)] overflow-hidden hover:scale-105 transition-transform cursor-pointer">
-                                        <img src="/wake/icon.png" alt="A frame from wake" className="w-full h-full object-cover" />
-                                    </div>
-                                </Link>
-                            </header>
-
-                            {/* Content */}
-                            <div className="z-10 sm:col-span-6">
-                                <h3>
-                                    <Link
-                                        href="/wake"
-                                        className="inline-flex items-baseline font-medium leading-tight text-[var(--text-primary)] hover:text-[var(--teal-300)] focus-visible:text-[var(--teal-300)] group/link text-base border-none mb-2"
-                                        aria-label="View wake Details"
-                                    >
-                                        <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
-                                        <span>
-                                            wake
-                                            <ArrowUpRight className="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 ml-1 translate-y-px" />
-                                        </span>
-                                    </Link>
-                                    <span className="ml-2 align-middle text-xs font-medium text-indigo-300/80">
-                                        (Live on the web)
-                                    </span>
-                                </h3>
-
-                                <p className="mt-2 text-sm leading-normal">
-                                    A living drawing instrument for the browser. Thousands of line-heads move through fields of force and
-                                    leave their trace, across a collection of 100,000 designs and fifteen behaviours: flocks, orbits,
-                                    Riley-style waves, branching growth. Six of them are real physics and maths, from the Lorenz attractor
-                                    to Kuramoto fireflies, simulated from their equations and tested against published values.
-                                </p>
-
-                                <ul className="mt-4 flex flex-wrap" aria-label="Technologies used">
-                                    {["TypeScript", "WebGL2", "Simulation", "Playwright", "KaTeX"].map((tech) => (
-                                        <li key={tech} className="mr-1.5 mt-2">
-                                            <div className="flex items-center rounded-full bg-[var(--teal-400)]/10 px-3 py-1 text-xs font-medium leading-5 text-[var(--teal-300)]">
-                                                {tech}
-                                            </div>
-                                        </li>
-                                    ))}
-                                </ul>
-
-                                <div className="mt-6 flex flex-wrap gap-2">
-                                    <a
-                                        href="https://wake-black.vercel.app"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="relative z-10 inline-flex items-center gap-2 rounded-lg bg-indigo-500/10 px-4 py-2 text-sm font-medium text-indigo-300 hover:bg-indigo-500/20 transition-colors focus-ring"
-                                        aria-label="Open wake (opens the live site)"
-                                    >
-                                        <Play className="h-4 w-4" aria-hidden="true" />
-                                        Open wake
-                                    </a>
-                                    <a
-                                        href="https://wake-black.vercel.app/case.html"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="relative z-10 inline-flex items-center gap-2 rounded-lg bg-slate-500/10 px-4 py-2 text-sm font-medium text-slate-300 hover:bg-slate-500/20 transition-colors focus-ring"
-                                        aria-label="Read the wake case study"
-                                    >
-                                        <BookOpen className="h-4 w-4" aria-hidden="true" />
-                                        Case study
-                                    </a>
-                                    <a
-                                        href="https://github.com/preet-portfolio/wake"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="relative z-10 inline-flex items-center gap-2 rounded-lg bg-slate-500/10 px-4 py-2 text-sm font-medium text-slate-300 hover:bg-slate-500/20 transition-colors focus-ring"
-                                        aria-label="wake source code on GitHub"
-                                    >
-                                        <Code2 className="h-4 w-4" aria-hidden="true" />
-                                        Source
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                    {/* AuditWedge Item */}
-                    <li className="mb-12">
-                        <div className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
-                            <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-[20px] transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/20 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.05)] lg:group-hover:drop-shadow-lg"></div>
-
-                            {/* Icon (no designed logo yet — name was only finalized recently) */}
-                            <header className="z-10 mb-2 mt-1 xs:mb-0 sm:col-span-2">
-                                <Link href="/auditwedge">
-                                    <div className="h-16 w-16 rounded-[16px] bg-amber-500/10 flex items-center justify-center shadow-[0_2px_10px_rgba(245,158,11,0.2)] overflow-hidden hover:scale-105 transition-transform cursor-pointer">
-                                        <Scale className="h-8 w-8 text-amber-400" aria-hidden="true" />
-                                    </div>
-                                </Link>
-                            </header>
-
-                            {/* Content */}
-                            <div className="z-10 sm:col-span-6">
-                                <h3>
-                                    <Link
-                                        href="/auditwedge"
-                                        className="inline-flex items-baseline font-medium leading-tight text-[var(--text-primary)] hover:text-[var(--teal-300)] focus-visible:text-[var(--teal-300)] group/link text-base border-none mb-2"
-                                        aria-label="View AuditWedge Details"
-                                    >
-                                        <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
-                                        <span>
-                                            AuditWedge
-                                            <ArrowUpRight className="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 ml-1 translate-y-px" />
-                                        </span>
-                                    </Link>
-                                    <span className="ml-2 align-middle text-xs font-medium text-amber-400/80">
-                                        (In development)
-                                    </span>
-                                </h3>
-
-                                <p className="mt-2 text-sm leading-normal">
-                                    Reconciles supplier invoices, Shopify checkout data, and payout records at the SKU level to surface hidden margin leaks — supplier overcharges, FX markup, and fixed-fee drag on cross-border e-commerce payouts.
-                                </p>
-
-                                <ul className="mt-4 flex flex-wrap" aria-label="Technologies used">
-                                    {["Python", "Claude API", "Shopify Admin GraphQL", "SQLite"].map((tech) => (
-                                        <li key={tech} className="mr-1.5 mt-2">
-                                            <div className="flex items-center rounded-full bg-[var(--teal-400)]/10 px-3 py-1 text-xs font-medium leading-5 text-[var(--teal-300)]">
-                                                {tech}
-                                            </div>
-                                        </li>
-                                    ))}
-                                </ul>
-
-                                <div className="mt-6">
-                                    <a
-                                        href="/sku-margin-audit-sample-report.txt"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="relative z-10 inline-flex items-center gap-2 rounded-lg bg-amber-500/10 px-4 py-2 text-sm font-medium text-amber-400 hover:bg-amber-500/20 transition-colors focus-ring"
-                                        aria-label="View AuditWedge sample audit report"
-                                    >
-                                        <FileText className="h-4 w-4" aria-hidden="true" />
-                                        View sample report
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                    {/* Deflate Item — in development, submission imminent */}
-                    <li className="mb-12">
-                        <div className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
-                            <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-[20px] transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/20 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.05)] lg:group-hover:drop-shadow-lg"></div>
-
-                            {/* Icon (app icon still being designed — same treatment as AuditWedge) */}
-                            <header className="z-10 mb-2 mt-1 xs:mb-0 sm:col-span-2">
-                                <Link href="/deflate">
-                                    <div className="h-16 w-16 rounded-[16px] bg-violet-500/10 flex items-center justify-center shadow-[0_2px_10px_rgba(91,61,245,0.2)] overflow-hidden hover:scale-105 transition-transform cursor-pointer">
-                                        <Shrink className="h-8 w-8 text-violet-400" aria-hidden="true" />
-                                    </div>
-                                </Link>
-                            </header>
-
-                            {/* Content */}
-                            <div className="z-10 sm:col-span-6">
-                                <h3>
-                                    <Link
-                                        href="/deflate"
-                                        className="inline-flex items-baseline font-medium leading-tight text-[var(--text-primary)] hover:text-[var(--teal-300)] focus-visible:text-[var(--teal-300)] group/link text-base border-none mb-2"
-                                        aria-label="View Deflate Details"
-                                    >
-                                        <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
-                                        <span>
-                                            Deflate
-                                            <ArrowUpRight className="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 ml-1 translate-y-px" />
-                                        </span>
-                                    </Link>
-                                    <span className="ml-2 align-middle text-xs font-medium text-violet-400/80">
-                                        (In development)
-                                    </span>
-                                </h3>
-
-                                <p className="mt-2 text-sm leading-normal">
-                                    Compresses PDFs and photos down to a size named in kilobytes — the number an upload form
-                                    actually asked for — then reports honestly what it reached instead of faking success or
-                                    silently ruining the page. Crops passport and signature photos to exact spec, makes scans
-                                    searchable with on-device OCR, and merges, splits and rotates the rest. Contains no
-                                    networking code at all.
-                                </p>
-
-                                <ul className="mt-4 flex flex-wrap" aria-label="Technologies used">
-                                    {["Swift", "SwiftUI", "PDFKit", "Vision", "Core Image", "ImageIO"].map((tech) => (
-                                        <li key={tech} className="mr-1.5 mt-2">
-                                            <div className="flex items-center rounded-full bg-[var(--teal-400)]/10 px-3 py-1 text-xs font-medium leading-5 text-[var(--teal-300)]">
-                                                {tech}
-                                            </div>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-
-                    {/* GeoLens Item */}
-                    <li className="mb-12">
-                        <div className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
-                            <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-[20px] transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/20 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.05)] lg:group-hover:drop-shadow-lg"></div>
-
-                            {/* App Icon */}
-                            <header className="z-10 mb-2 mt-1 xs:mb-0 sm:col-span-2">
-                                <Link href="/geolens">
-                                    <div className="h-16 w-16 rounded-[16px] flex items-center justify-center shadow-[0_2px_10px_rgba(45,127,249,0.25)] overflow-hidden hover:scale-105 transition-transform cursor-pointer">
-                                        <img src="/geolens-logo.png" alt="GeoLens App Icon" className="w-full h-full object-cover" />
-                                    </div>
-                                </Link>
-                            </header>
-
-                            {/* Content */}
-                            <div className="z-10 sm:col-span-6">
-                                <h3>
-                                    <Link
-                                        href="/geolens"
-                                        className="inline-flex items-baseline font-medium leading-tight text-[var(--text-primary)] hover:text-[var(--teal-300)] focus-visible:text-[var(--teal-300)] group/link text-base border-none mb-2"
-                                        aria-label="View GeoLens Details"
-                                    >
-                                        <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
-                                        <span>
-                                            GeoLens
-                                            <ArrowUpRight className="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 ml-1 translate-y-px" />
-                                        </span>
-                                    </Link>
-                                </h3>
-
-                                <p className="mt-2 text-sm leading-normal">
-                                    An evidence-grade geotagging camera for surveyors, valuers, and field inspectors. Every photo carries a burned-in stamp — coordinates, address, map tile, timestamp, and operator name — plus a verifiable EXIF audit trail. Zero data collection.
-                                </p>
-
-                                <ul className="mt-4 flex flex-wrap" aria-label="Technologies used">
-                                    {["Swift", "SwiftUI", "SwiftData", "StoreKit 2", "MapKit", "WeatherKit"].map((tech) => (
-                                        <li key={tech} className="mr-1.5 mt-2">
-                                            <div className="flex items-center rounded-full bg-[var(--teal-400)]/10 px-3 py-1 text-xs font-medium leading-5 text-[var(--teal-300)]">
-                                                {tech}
-                                            </div>
-                                        </li>
-                                    ))}
-                                </ul>
-
-                                <div className="mt-6">
-                                    <a
-                                        href="https://apps.apple.com/us/app/geolens-geotag-camera/id6779347733"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="relative z-10 inline-block focus-ring rounded-lg transition-transform hover:scale-105"
-                                        aria-label="Download GeoLens on the App Store"
-                                    >
-                                        <img
-                                            src="/app-store-badge-black.svg"
-                                            alt="Download on the App Store"
-                                            className="h-10 w-auto"
-                                        />
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                    {/* DocFort Item */}
-                    <li className="mb-12">
-                        <div className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
-                            <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-[20px] transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/20 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.05)] lg:group-hover:drop-shadow-lg"></div>
-
-                            {/* App Icon (Left Column on larger screens) */}
-                            <header className="z-10 mb-2 mt-1 xs:mb-0 sm:col-span-2">
-                                <Link href="/docfort">
-                                    <div className="h-16 w-16 rounded-[16px] bg-white flex items-center justify-center shadow-[0_2px_10px_rgba(0,143,214,0.15)] overflow-hidden hover:scale-105 transition-transform cursor-pointer">
-                                        <img src="/docfort-logo.png" alt="DocFort Official Logo" className="w-full h-full object-cover" />
-                                    </div>
-                                </Link>
-                            </header>
-
-                            {/* Content (Right Column structure) */}
-                            <div className="z-10 sm:col-span-6">
-                                <h3>
-                                    <Link
-                                        href="/docfort"
-                                        className="inline-flex items-baseline font-medium leading-tight text-[var(--text-primary)] hover:text-[var(--teal-300)] focus-visible:text-[var(--teal-300)] group/link text-base border-none mb-2"
-                                        aria-label="View DocFort Details"
-                                    >
-                                        <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
-                                        <span>
-                                            DocFort
-                                            <ArrowUpRight className="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 ml-1 translate-y-px" />
-                                        </span>
-                                    </Link>
-                                </h3>
-
-                                <p className="mt-2 text-sm leading-normal">
-                                    A privacy-first document vault for iPhone, iPad & Mac. Keep your important documents secure, organized, and always accessible — with zero data collection. Optimized to an incredibly small 3.1 MB footprint with instant load times.
-                                </p>
-
-                                <ul className="mt-4 flex flex-wrap" aria-label="Technologies used">
-                                    {["Swift", "SwiftUI", "CoreData", "CloudKit"].map((tech) => (
-                                        <li key={tech} className="mr-1.5 mt-2">
-                                            <div className="flex items-center rounded-full bg-[var(--teal-400)]/10 px-3 py-1 text-xs font-medium leading-5 text-[var(--teal-300)]">
-                                                {tech}
-                                            </div>
-                                        </li>
-                                    ))}
-                                </ul>
-
-                                <div className="mt-6">
-                                    <a
-                                        href="https://apps.apple.com/in/app/docfort/id6759193013"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="relative z-10 inline-block focus-ring rounded-lg transition-transform hover:scale-105"
-                                        aria-label="Download DocFort on the App Store"
-                                    >
-                                        <img
-                                            src="/app-store-badge-black.svg"
-                                            alt="Download on the App Store"
-                                            className="h-10 w-auto"
-                                        />
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+            <aside aria-live="polite" className="sticky top-10 hidden flex-[0_1_340px] md:block">
+                <div className="flex flex-col gap-5 rounded-[28px] bg-white p-7 shadow-[0_30px_60px_rgba(10,10,10,0.08)]">
+                    {active.icon ? (
+                        <img src={active.icon} alt="" className="h-[120px] w-[120px] rounded-[28px] object-cover shadow-[0_0_0_1px_#E4E4E1]" />
+                    ) : (
+                        <span
+                            className="flex h-[120px] w-[120px] items-center justify-center rounded-[28px] font-serif text-[56px] italic text-white"
+                            style={{ background: active.tile }}
+                        >
+                            {active.name[0]}
+                        </span>
+                    )}
+                    <p className="m-0 text-lg leading-snug text-[#0A0A0A]">{active.line}</p>
+                </div>
+            </aside>
         </section>
     );
 }
