@@ -62,6 +62,72 @@ export default function ProjectsSection() {
                         </div>
                     </li>
 
+                    {/* The Hand Inside the Equation — a live web gallery, not an App Store app */}
+                    <li className="mb-12">
+                        <div className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+                            <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-[20px] transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/20 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.05)] lg:group-hover:drop-shadow-lg"></div>
+
+                            {/* Icon: a detail rendered by the gallery's first study */}
+                            <header className="z-10 mb-2 mt-1 xs:mb-0 sm:col-span-2">
+                                <Link href="/interactive-media-gallery">
+                                    <div className="h-16 w-16 rounded-[16px] flex items-center justify-center shadow-[0_2px_10px_rgba(234,88,12,0.25)] overflow-hidden hover:scale-105 transition-transform cursor-pointer">
+                                        <img src="/interactive-media-gallery/icon.png" alt="Detail of a marbled pattern from the gallery" className="w-full h-full object-cover" />
+                                    </div>
+                                </Link>
+                            </header>
+
+                            {/* Content */}
+                            <div className="z-10 sm:col-span-6">
+                                <h3>
+                                    <Link
+                                        href="/interactive-media-gallery"
+                                        className="inline-flex items-baseline font-medium leading-tight text-[var(--text-primary)] hover:text-[var(--teal-300)] focus-visible:text-[var(--teal-300)] group/link text-base border-none mb-2"
+                                        aria-label="View The Hand Inside the Equation details"
+                                    >
+                                        <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
+                                        <span>
+                                            The Hand Inside the Equation
+                                            <ArrowUpRight className="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 ml-1 translate-y-px" />
+                                        </span>
+                                    </Link>
+                                    <span className="ml-2 align-middle text-xs font-medium text-orange-300/80">
+                                        (Live on the web)
+                                    </span>
+                                </h3>
+
+                                <p className="mt-2 text-sm leading-normal">
+                                    A live gallery of interactive media studies that hand the equation back to you: paper marbling
+                                    rebuilt from its maths, light bending around a black hole, and your own camera drawn only in
+                                    letters. Each study runs its maths live on the GPU and is checked against an independent
+                                    Python reference.
+                                </p>
+
+                                <ul className="mt-4 flex flex-wrap" aria-label="Technologies used">
+                                    {["TypeScript", "Next.js", "WebGL2", "Three.js", "Python"].map((tech) => (
+                                        <li key={tech} className="mr-1.5 mt-2">
+                                            <div className="flex items-center rounded-full bg-[var(--teal-400)]/10 px-3 py-1 text-xs font-medium leading-5 text-[var(--teal-300)]">
+                                                {tech}
+                                            </div>
+                                        </li>
+                                    ))}
+                                </ul>
+
+                                <div className="mt-6 flex flex-wrap gap-2">
+                                    <a
+                                        href="https://interactive-media-gallery.vercel.app"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="relative z-10 inline-flex items-center gap-2 rounded-lg bg-orange-500/10 px-4 py-2 text-sm font-medium text-orange-300 hover:bg-orange-500/20 transition-colors focus-ring"
+                                        aria-label="Open the gallery (opens the live site)"
+                                    >
+                                        <Play className="h-4 w-4" aria-hidden="true" />
+                                        Open the gallery
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
                     {/* wake Item — a live web piece, not an App Store app */}
                     <li className="mb-12">
                         <div className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
