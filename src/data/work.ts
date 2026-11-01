@@ -6,7 +6,7 @@ export type Item = {
     id: string;
     group: Group;
     name: string;
-    page: string;
+    page?: string;
     icon?: string;
     line: string;
     appStoreId?: string;

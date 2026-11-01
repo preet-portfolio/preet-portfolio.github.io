@@ -1,3 +1,4 @@
+import Link from "next/link";
 import WorkGroup from "@/components/WorkGroup";
 import { apps, projects } from "@/data/work";
 
@@ -11,6 +12,7 @@ export default function Home() {
         <nav aria-label="Main" className="flex gap-1">
           <a href="#apps" className={navLink}>Apps</a>
           <a href="#projects" className={navLink}>Projects</a>
+          <Link href="/about/" className={navLink}>About</Link>
           <a href="mailto:preet2020@icloud.com" className={navLink}>Contact</a>
         </nav>
       </header>

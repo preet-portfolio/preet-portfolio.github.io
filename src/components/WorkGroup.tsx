@@ -38,9 +38,11 @@ export default function WorkGroup({ id, title, note, items }: { id: Group; title
                                     <img src="/app-store-badge-black.svg" alt="" className="h-10 w-auto" />
                                 </a>
                             )}
-                            <Link href={item.page} className="text-ink underline underline-offset-4 hover:text-accent-deep">
-                                About {item.name}
-                            </Link>
+                            {item.page && (
+                                <Link href={item.page} className="text-ink underline underline-offset-4 hover:text-accent-deep">
+                                    About {item.name}
+                                </Link>
+                            )}
                             {item.links.map((link) => (
                                 <a key={link.href} href={link.href} className="text-muted underline underline-offset-4 hover:text-accent-deep">
                                     {link.label}

@@ -61,6 +61,41 @@
       ]
     },
     {
+      "id": "sky",
+      "group": "projects",
+      "name": "I found something in the sky",
+      "line": "Looking for a star or planet nobody has noticed, in free NASA telescope data. Nothing found yet.",
+      "status": "In progress",
+      "kind": "Astronomy notebook",
+      "links": [
+        { "label": "Open the notebook", "href": "https://i-found-something-in-the-sky.vercel.app" }
+      ]
+    },
+    {
+      "id": "ladder",
+      "group": "projects",
+      "name": "Infrastructure Ladder",
+      "line": "Ten pieces of infrastructure rebuilt in .NET from their specs, each graded by someone else’s tests.",
+      "status": "In progress",
+      "kind": "Infrastructure in .NET",
+      "links": [
+        { "label": "Open the ladder", "href": "https://dotnet-ladder.vercel.app" },
+        { "label": "Source", "href": "https://github.com/preet-portfolio/dotnet-ladder" }
+      ]
+    },
+    {
+      "id": "chirper",
+      "group": "projects",
+      "name": "Chirper",
+      "line": "Laravel’s tutorial app, built tests first, with its decisions written down.",
+      "status": "Live on the web",
+      "kind": "Laravel practice app",
+      "links": [
+        { "label": "Open Chirper", "href": "https://chirper-kohl.vercel.app" },
+        { "label": "Source", "href": "https://github.com/preet-portfolio/chirper" }
+      ]
+    },
+    {
       "id": "hand",
       "group": "projects",
       "name": "The Hand Inside the Equation",
@@ -85,6 +120,18 @@
       "links": [
         { "label": "Open wake", "href": "https://wake-black.vercel.app" },
         { "label": "Source", "href": "https://github.com/preet-portfolio/wake" }
+      ]
+    },
+    {
+      "id": "playground",
+      "group": "projects",
+      "name": "Math & Physics Playground",
+      "line": "Pendulums, orbits and fractals you can play with, each running on the real equations.",
+      "status": "Live on the web",
+      "kind": "Maths and physics for the browser",
+      "links": [
+        { "label": "Open the playground", "href": "https://web-indol-delta-80.vercel.app" },
+        { "label": "Source", "href": "https://github.com/preet-portfolio/math-physics-playground" }
       ]
     },
     {
