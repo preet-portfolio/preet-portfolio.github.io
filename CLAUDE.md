@@ -33,13 +33,17 @@ pages. See `README.md` for the stack, layout and commands.
 ## Apps linked from here
 | App | Status | App Store |
 |---|---|---|
-| Agitate | Live (1.0) as of 2026-10-21; 1.1 submitted for review | id 6823962224 |
-| GeoLens | Live (1.1); 1.2 in review as of 2026-09-21 | id 6779347733 |
-| Deflate | See the page for its current state | — |
-| DocFort, AuditWedge | See their pages | — |
+| Agitate | Live (1.1) as of 2026-11-01 | id 6823962224 |
+| GeoLens | Live (1.5) as of 2026-11-01 | id 6779347733 |
+| Deflate | Live (1.0) as of 2026-11-01; iPhone, iPad and Mac | id 6806356565 |
+| DocFort | Live (1.5) as of 2026-11-01 | id 6759193013 |
+| AuditWedge | Not on the App Store | — |
 
-When GeoLens 1.2 is live, add the front camera and promo codes to `src/app/geolens/page.tsx`
-and mention that the custom logo is a Pro feature.
+Apple's lookup (`npm run check:apps`) is the source for versions; update this table from it.
+
+GeoLens 1.2 and later are live, but `src/app/geolens/page.tsx` doesn't yet mention the front
+camera, promo codes or that the custom logo is a Pro feature. Check each against the shipped
+app before adding it.
 
 ## Git
 Imperative commit subjects with a body that says why. One change per commit.

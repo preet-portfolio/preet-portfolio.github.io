@@ -29,11 +29,11 @@ export default function DeflatePage() {
                 {/* Hero */}
                 <header className="mb-16 md:mb-20">
                     <div className="flex flex-col md:flex-row gap-8 items-start md:items-center mb-8">
-                        {/* Icon placeholder — the app icon is still being designed, so this
-                            follows the AuditWedge convention of a lucide mark in a tinted tile. */}
-                        <div className="h-24 w-24 shrink-0 rounded-[24px] bg-violet-500/10 flex items-center justify-center shadow-[0_4px_24px_rgba(91,61,245,0.3)]">
-                            <Shrink className="h-11 w-11 text-violet-400" aria-hidden="true" />
-                        </div>
+                        <img
+                            src="/deflate-logo.png"
+                            alt=""
+                            className="h-24 w-24 shrink-0 rounded-[24px] shadow-[0_4px_24px_rgba(91,61,245,0.3)]"
+                        />
                         <div>
                             <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-slate-200 mb-3">Deflate</h1>
                             <p className="text-xl sm:text-2xl text-slate-400 font-light tracking-tight">PDFs and photos, at the size you were asked for</p>
@@ -51,9 +51,12 @@ export default function DeflatePage() {
                     </p>
 
                     <div className="flex flex-wrap items-center gap-4">
-                        <span className="inline-flex items-center rounded-full bg-violet-500/15 px-4 py-1.5 text-xs font-semibold tracking-wide text-violet-300">
-                            In development
-                        </span>
+                        <a
+                            href="https://apps.apple.com/app/id6806356565"
+                            className="inline-flex items-center rounded-full bg-violet-500/15 px-4 py-1.5 text-xs font-semibold tracking-wide text-violet-300 hover:bg-violet-500/25 transition-colors focus-ring"
+                        >
+                            On the App Store
+                        </a>
                         <span className="inline-flex items-center rounded-full bg-violet-500/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-violet-300">
                             iPhone, iPad & Mac
                         </span>
