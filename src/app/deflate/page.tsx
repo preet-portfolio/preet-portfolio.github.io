@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { backHref } from "@/data/work";
 import { ArrowLeft, Shrink, Scale, FileText, Layers, Lock, LifeBuoy, Crop, ScanText } from "lucide-react";
 
 export const metadata = {
@@ -19,7 +20,7 @@ export default function DeflatePage() {
 
                 {/* Back navigation */}
                 <nav className="mb-12">
-                    <Link href="/#projects" className="inline-flex items-center gap-2 text-sm font-semibold tracking-wide text-slate-400 hover:text-violet-300 transition-colors focus-ring rounded-md">
+                    <Link href={backHref("deflate")} className="inline-flex items-center gap-2 text-sm font-semibold tracking-wide text-slate-400 hover:text-violet-300 transition-colors focus-ring rounded-md">
                         <ArrowLeft className="w-4 h-4" />
                         Back to Portfolio
                     </Link>
@@ -54,7 +55,7 @@ export default function DeflatePage() {
                             In development
                         </span>
                         <span className="inline-flex items-center rounded-full bg-violet-500/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-violet-300">
-                            iPhone & Mac
+                            iPhone, iPad & Mac
                         </span>
                         <span className="inline-flex items-center rounded-full bg-violet-500/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-violet-300">
                             Zero Data Collection

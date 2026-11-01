@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { backHref } from "@/data/work";
 import { ShieldCheck, ArrowLeft } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -69,7 +70,7 @@ export default function JoinPage() {
                 {/* Back link */}
                 <div className="mt-10">
                     <Link
-                        href="/"
+                        href={backHref("docfort")}
                         className="inline-flex items-center gap-1.5 text-sm text-slate-500 hover:text-teal-300 transition-colors"
                     >
                         <ArrowLeft className="w-3.5 h-3.5" />

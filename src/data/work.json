@@ -1,0 +1,103 @@
+{
+  "_rule": "group is \"apps\" only while the item is in Apple's lookup for developer 1874836869; everything else is \"projects\". Run npm run check:apps after changing it. Newest first within each group.",
+  "items": [
+    {
+      "id": "agitate",
+      "group": "apps",
+      "name": "Agitate",
+      "page": "/agitate/",
+      "icon": "/agitate-logo.png",
+      "line": "An instant camera. Every photo prints blank, and you shake your phone to develop it.",
+      "appStoreId": "6823962224",
+      "platforms": ["iPhone", "iPad"],
+      "since": "2026-10",
+      "links": [
+        { "label": "Privacy", "href": "https://preet-portfolio.github.io/agitate-support/privacy.html" },
+        { "label": "Support", "href": "https://preet-portfolio.github.io/agitate-support/" }
+      ]
+    },
+    {
+      "id": "deflate",
+      "group": "apps",
+      "name": "Deflate",
+      "page": "/deflate/",
+      "icon": "/deflate-logo.png",
+      "line": "Shrinks a PDF or photo to the exact size an upload form asks for.",
+      "appStoreId": "6806356565",
+      "platforms": ["iPhone", "iPad", "Mac"],
+      "since": "2026-09",
+      "links": [
+        { "label": "Privacy", "href": "/deflate/privacy/" },
+        { "label": "Support", "href": "/deflate/support/" }
+      ]
+    },
+    {
+      "id": "geolens",
+      "group": "apps",
+      "name": "GeoLens",
+      "page": "/geolens/",
+      "icon": "/geolens-logo.png",
+      "line": "A camera that stamps every photo with where and when it was taken.",
+      "appStoreId": "6779347733",
+      "platforms": ["iPhone", "iPad"],
+      "since": "2026-06",
+      "links": [
+        { "label": "Privacy", "href": "/geolens/privacy/" },
+        { "label": "Terms", "href": "/geolens/terms/" }
+      ]
+    },
+    {
+      "id": "docfort",
+      "group": "apps",
+      "name": "DocFort",
+      "page": "/docfort/",
+      "icon": "/docfort-logo.png",
+      "line": "A safe place for the documents you can’t lose. Collects nothing.",
+      "appStoreId": "6759193013",
+      "platforms": ["iPhone", "iPad"],
+      "since": "2026-02",
+      "links": [
+        { "label": "Support", "href": "https://preet-portfolio.github.io/docfort-support/" }
+      ]
+    },
+    {
+      "id": "hand",
+      "group": "projects",
+      "name": "The Hand Inside the Equation",
+      "page": "/interactive-media-gallery/",
+      "icon": "/interactive-media-gallery/icon.png",
+      "line": "Paper marbling, a black hole’s light and your own camera, each rebuilt from its maths.",
+      "status": "Live on the web",
+      "kind": "Interactive web gallery",
+      "links": [
+        { "label": "Open the gallery", "href": "https://interactive-media-gallery.vercel.app" }
+      ]
+    },
+    {
+      "id": "wake",
+      "group": "projects",
+      "name": "wake",
+      "page": "/wake/",
+      "icon": "/wake/icon.png",
+      "line": "A living drawing instrument: thousands of lines moving through fields of force.",
+      "status": "Live on the web",
+      "kind": "Generative art for the browser",
+      "links": [
+        { "label": "Open wake", "href": "https://wake-black.vercel.app" },
+        { "label": "Source", "href": "https://github.com/preet-portfolio/wake" }
+      ]
+    },
+    {
+      "id": "auditwedge",
+      "group": "projects",
+      "name": "AuditWedge",
+      "page": "/auditwedge/",
+      "line": "Shows online stores where money slips away on every cross-border order.",
+      "status": "In development",
+      "kind": "Business tool",
+      "links": [
+        { "label": "Sample report (synthetic data)", "href": "/sku-margin-audit-sample-report.txt" }
+      ]
+    }
+  ]
+}

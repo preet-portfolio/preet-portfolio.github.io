@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "check:apps": "node scripts/check-apps.mjs",
+    "check:links": "node scripts/check-links.mjs"
   },
   "dependencies": {
     "framer-motion": "^12.34.3",
