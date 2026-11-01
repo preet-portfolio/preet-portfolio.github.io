@@ -3,8 +3,8 @@ import { backHref } from "@/data/work";
 import { ArrowLeft, Map, ShieldCheck, Navigation, Briefcase, FileText, Lock } from "lucide-react";
 
 export const metadata = {
-    title: "GeoLens | Evidence-Grade Geotagging Camera",
-    description: "GeoLens stamps every photo with coordinates, address, a map of the spot, and a verifiable EXIF audit trail. Built for surveyors, valuers, and field inspectors. Available on the App Store.",
+    title: "GeoLens | Geotagged Photos with an Audit Trail",
+    description: "GeoLens stamps every photo with coordinates, address, a map of the spot, and an EXIF audit trail. Built for surveyors, valuers, and field inspectors. Available on the App Store.",
 };
 
 export default function GeoLensPage() {
@@ -33,14 +33,14 @@ export default function GeoLensPage() {
                         </div>
                         <div>
                             <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-slate-200 mb-3">GeoLens</h1>
-                            <p className="text-xl sm:text-2xl text-slate-400 font-light tracking-tight">Evidence-Grade Geotagged Photos</p>
+                            <p className="text-xl sm:text-2xl text-slate-400 font-light tracking-tight">Geotagged Photos with an Audit Trail</p>
                         </div>
                     </div>
 
                     <p className="text-lg leading-relaxed text-slate-400 max-w-2xl mb-8">
                         Surveyors, property valuers, loan officers, and field inspectors need undeniable proof that they were at a place at a time.
                         GeoLens burns that proof into every photo — coordinates, address, a map of the exact spot, timestamp, and the operator's
-                        name — and embeds a machine-readable EXIF audit trail that banks and agencies can check.
+                        name — and embeds a machine-readable EXIF audit trail.
                     </p>
 
                     <div className="flex flex-wrap items-center gap-4">
@@ -69,7 +69,7 @@ export default function GeoLensPage() {
                 {/* The stamp — the product's signature, recreated */}
                 <section className="mb-16 md:mb-20">
                     <div className="rounded-2xl bg-slate-800/30 border border-slate-700/50 p-6 md:p-10">
-                        <p className="text-xs font-semibold uppercase tracking-widest text-sky-400/80 mb-6">What every capture carries</p>
+                        <p className="text-xs font-semibold uppercase tracking-widest text-sky-400/80 mb-6">What a capture can carry</p>
                         <div className="flex gap-3 items-stretch rounded-xl bg-black/50 p-4 max-w-md font-mono text-[11px] sm:text-xs leading-relaxed text-white/90">
                             <div className="w-20 sm:w-24 shrink-0 rounded-lg bg-gradient-to-br from-emerald-900/70 to-slate-800 relative overflow-hidden" aria-hidden="true">
                                 <div className="absolute inset-0 opacity-30" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.25) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.25) 1px, transparent 1px)", backgroundSize: "14px 14px" }}></div>
@@ -85,7 +85,7 @@ export default function GeoLensPage() {
                             </div>
                         </div>
                         <p className="text-sm text-slate-500 mt-4">
-                            Burned into the pixels — crop-resistant, screenshot-resistant, and mirrored in EXIF GPS metadata.
+                            Burned into the pixels — screenshot-resistant, and mirrored in EXIF GPS metadata.
                         </p>
                     </div>
                 </section>
@@ -171,8 +171,9 @@ export default function GeoLensPage() {
                 <section className="text-center max-w-2xl mx-auto">
                     <h2 className="text-2xl font-semibold text-slate-200 mb-4">Privacy & Legal</h2>
                     <p className="text-slate-400 leading-relaxed mb-8">
-                        GeoLens collects nothing. No servers, no analytics, no trackers — your photos, locations, and identity
-                        stay on your device. Read the full documents:
+                        GeoLens collects nothing. No servers, no analytics, no trackers. Your photos and your name stay on
+                        your device; the location goes to Apple only for the weather, the address and the map. Read the full
+                        documents:
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
                         <Link
@@ -192,7 +193,7 @@ export default function GeoLensPage() {
 
                 <div className="mt-24 text-center">
                     <p className="text-sm text-slate-500">
-                        Built with Swift 6, SwiftUI, SwiftData, StoreKit 2, MapKit & WeatherKit — clean architecture, 100+ on-device tests.
+                        Built in Swift with SwiftUI, SwiftData, StoreKit 2, MapKit and WeatherKit, with 240 tests.
                     </p>
                 </div>
 
