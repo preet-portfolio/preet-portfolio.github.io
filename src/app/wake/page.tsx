@@ -121,7 +121,7 @@ export default function WakePage() {
                             <li><span className="text-slate-200">Lorenz chaos rate</span> measured at 0.90 against the published ≈ 0.906.</li>
                             <li><span className="text-slate-200">Fireflies</span> synchronise exactly as Kuramoto theory predicts, to within 0.001.</li>
                             <li><span className="text-slate-200">Orbits and pendulums</span> conserve energy to better than one part in 100,000.</li>
-                            <li><span className="text-slate-200">Turing patterns</span> on the GPU match the CPU reference exactly (correlation 1.0000).</li>
+                            <li><span className="text-slate-200">Turing patterns</span> on the GPU match the CPU reference (correlation 1.0000).</li>
                             <li><span className="text-slate-200">Alive:</span> visible motion within a second of every visit, and it never freezes, even without a GPU.</li>
                             <li><span className="text-slate-200">Original:</span> a token-level copy check against its inspiration finds no shared code.</li>
                         </ul>
