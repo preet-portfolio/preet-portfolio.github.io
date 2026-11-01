@@ -11,7 +11,7 @@ export const metadata = {
 function Faq({ question, children }: { question: string; children: React.ReactNode }) {
     return (
         <div className="border-t border-rule pb-2 pt-5">
-            <h3 className="mb-2 text-base font-semibold text-ink">{question}</h3>
+            <h3 className="mb-2 text-base font-semibold tracking-tight text-ink">{question}</h3>
             <div className="space-y-3">{children}</div>
         </div>
     );
