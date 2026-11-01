@@ -9,16 +9,21 @@ const res = await fetch(`https://itunes.apple.com/lookup?id=${DEVELOPER_ID}&enti
 if (!res.ok) throw new Error(`Apple lookup failed: HTTP ${res.status}`);
 const live = (await res.json()).results.filter((r) => r.wrapperType === "software");
 
-// Apple lists devices by model; reduce them to the platform names the site shows.
-const platformsOf = (devices) =>
-    ["iPhone", "iPad", "Mac"].filter((p) => devices.some((d) => d.startsWith(p === "Mac" ? "MacDesktop" : p)));
+// Apple lists devices by model; reduce them to the platform names the site shows. It lists iPads
+// for iPhone-only apps too, since those run on iPad, so iPad counts only when the listing has iPad
+// screenshots, which App Store Connect requires of an app built for iPad.
+const platformsOf = (r) =>
+    ["iPhone", "iPad", "Mac"].filter((p) =>
+        p === "iPad"
+            ? r.ipadScreenshotUrls?.length > 0
+            : r.supportedDevices.some((d) => d.startsWith(p === "Mac" ? "MacDesktop" : p)));
 
 const problems = [];
 const apps = items.filter((i) => i.group === "apps");
 for (const r of live) {
     const app = apps.find((a) => a.appStoreId === String(r.trackId));
     if (!app) { problems.push(`Live on the App Store but not in the apps group: ${r.trackName} (${r.trackId})`); continue; }
-    const want = platformsOf(r.supportedDevices).join(", ");
+    const want = platformsOf(r).join(", ");
     if (app.platforms.join(", ") !== want) problems.push(`${app.name}: site says ${app.platforms.join(", ")}, Apple says ${want}`);
     console.log(`ok  ${app.name.padEnd(10)} ${r.trackId}  ${want}`);
 }
