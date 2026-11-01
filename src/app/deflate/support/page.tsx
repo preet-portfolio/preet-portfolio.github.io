@@ -50,18 +50,19 @@ export default function DeflateSupportPage() {
                 <Section title="Frequently asked questions">
                     <Faq question="Why didn't it reach the exact size I asked for?">
                         <p>
-                            Because for that file, it couldn&apos;t — not without making the page unreadable.
+                            Because for that file, it couldn&apos;t. Deflate has a lowest setting, and even at that setting
+                            the file was still bigger than your target.
                         </p>
                         <p>
                             Every document has a floor. A dense, multi-megapixel scan simply cannot become a legible 40 KB
-                            file; past a point, shrinking further means destroying the text you needed to keep. Deflate stops
-                            at that floor and hands back the smallest readable version, telling you what it reached and what
-                            you aimed for.
+                            file; past a point, shrinking further means destroying the text you needed to keep. When Deflate
+                            reaches its lowest setting, it hands back the smallest version it can make, telling you what it
+                            reached and what you aimed for.
                         </p>
                         <p>
                             That result is still worth having. A file that went from 9.6 MB to 187 KB is 98% smaller and will
                             clear most upload limits, even though the target said 40 KB. Deflate would rather show you a
-                            useful file and an honest number than a failure message or a ruined page.
+                            useful file and an honest number than a failure message.
                         </p>
                     </Faq>
 
@@ -81,7 +82,7 @@ export default function DeflateSupportPage() {
                             &ldquo;born-digital&rdquo; — they pass through completely untouched, staying sharp at any zoom.
                         </p>
                         <p>
-                            Scanned pages are pictures of text, and pictures are the only thing that can be compressed. So in a
+                            Scanned pages are pictures of text, and pictures are the only thing Deflate compresses. So in a
                             mixed document, the typed pages stay perfect and only the scans change. That difference is the
                             feature, not a glitch.
                         </p>
@@ -140,12 +141,13 @@ export default function DeflateSupportPage() {
 
                     <Faq question="What does &ldquo;Make Searchable&rdquo; do?">
                         <p>
-                            It reads the text in a scanned document and adds an invisible, selectable layer on top of it. The
-                            page looks exactly the same, but you can now search the PDF, and select and copy its text.
+                            It reads the text in a scanned document, redraws each page as an image and adds an invisible,
+                            selectable layer of text on top. You can then search the PDF, and select and copy its text.
                         </p>
                         <p>
-                            The original page is kept underneath, untouched — nothing is redrawn or replaced. Recognition runs
-                            on your device using Apple&apos;s Vision framework; the text is never sent anywhere.
+                            Because each page is replaced by that image, use it on scans rather than on pages that already
+                            have real text. Recognition runs on your device using Apple&apos;s Vision framework; the text is
+                            never sent anywhere.
                         </p>
                     </Faq>
 
