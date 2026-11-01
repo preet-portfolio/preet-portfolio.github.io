@@ -23,8 +23,10 @@ pages. See `README.md` for the stack, layout and commands.
   (`.github/workflows/deploy.yml`); watch the run and check the live page with `curl -L` (the
   site uses trailing slashes, so `/geolens/privacy` redirects to `/geolens/privacy/`).
 - `npm run build` must pass before you open a PR.
-- Keep the project cards in `src/components/ProjectsSection.tsx` in step with the showcase
-  pages, newest work first.
+- The home page's two groups come from `src/data/work.json`, newest work first. An item is in
+  `"apps"` only while Apple's lookup for developer 1874836869 lists it; everything else is
+  `"projects"`. `npm run check:apps` compares the file with Apple, and `npm run check:links`
+  checks `./out` after a build.
 - Force-pushing `main` is allowed by GitHub but rewrites what the public sees; the pull-request
   refs (`refs/pull/*`) keep the old commits reachable and only GitHub Support can clear them.
 

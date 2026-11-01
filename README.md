@@ -21,14 +21,16 @@ npm run lint
 | Path | What it is |
 |---|---|
 | `src/app/page.tsx` | The home page |
-| `src/components/ProjectsSection.tsx` | The project cards on the home page, newest first |
+| `src/data/work.json` | Every app and project on the home page, and which group each is in |
+| `src/components/WorkGroup.tsx` | One group on the home page: Apps or Projects |
+| `scripts/check-apps.mjs`, `check-links.mjs` | `npm run check:apps` and `npm run check:links` |
 | `src/app/<project>/page.tsx` | One showcase page per app (`geolens`, `deflate`, `docfort`, `auditwedge`) |
 | `src/app/geolens/privacy`, `terms` | GeoLens's privacy policy and terms of use, linked from the App Store |
 | `src/app/deflate/privacy`, `support` | Deflate's privacy policy and support page |
 | `public/` | Icons and images served as-is |
 
-To add a project: create `src/app/<name>/page.tsx`, add a card to `ProjectsSection.tsx`, and put
-its icon in `public/`.
+To add a project: create `src/app/<name>/page.tsx`, add an entry to `src/data/work.json`, and put
+its icon in `public/`. When an app goes live on the App Store, change its `group` to `"apps"`.
 
 ## Deploying
 Every push to `main` runs `.github/workflows/deploy.yml`, which builds the site and publishes
