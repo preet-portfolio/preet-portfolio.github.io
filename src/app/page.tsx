@@ -1,6 +1,6 @@
 import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
-import HeroName from "@/components/HeroName";
-import ProjectsSection from "@/components/ProjectsSection";
+import WorkGroup from "@/components/WorkGroup";
+import { apps, projects } from "@/data/work";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-geist" });
 const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-geist-mono" });
@@ -13,20 +13,28 @@ export default function Home() {
     <div
       className={`${geist.variable} ${geistMono.variable} ${instrumentSerif.variable} min-h-screen overflow-x-clip bg-[#F4F3EF] text-[#0A0A0A] [--font-mono:var(--font-geist-mono)] [--font-sans:var(--font-geist)] [--font-serif:var(--font-instrument)] font-sans`}
     >
-      <header className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between gap-3 px-6 py-7 font-mono text-[13px] text-[#5C5C58]">
+      <header className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between gap-3 px-4 py-7 font-mono text-[13px] text-[#5C5C58] md:px-6">
         <span>PP — {new Date().getFullYear()}</span>
         <nav aria-label="Main" className="flex gap-1">
-          <a href="#work" className={navLink}>Work</a>
+          <a href="#apps" className={navLink}>Apps</a>
+          <a href="#projects" className={navLink}>Projects</a>
           <a href="mailto:preet2020@icloud.com" className={navLink}>Contact</a>
         </nav>
       </header>
 
-      <main>
-        <HeroName />
-        <ProjectsSection />
+      <main className="mx-auto max-w-screen-xl px-4 md:px-6">
+        <h1 className="mb-10 mt-6 text-[#0A0A0A] text-[clamp(56px,10vw,140px)] font-semibold leading-[0.9] tracking-[-0.06em] md:mb-14">
+          Preet Panchal
+        </h1>
+
+        {/* Apps get the wider column: they are what most visitors come to check. */}
+        <div className="grid items-start gap-6 lg:grid-cols-[3fr_2fr]">
+          <WorkGroup id="apps" title="Apps on the App Store" note="Tap one for links" items={apps} />
+          <WorkGroup id="projects" title="Projects" note="Not on the App Store" items={projects} />
+        </div>
       </main>
 
-      <footer className="mx-auto max-w-screen-xl px-6 pb-12 pt-20 text-center">
+      <footer className="mx-auto max-w-screen-xl px-4 pb-12 pt-24 text-center md:px-6">
         <a
           href="mailto:preet2020@icloud.com"
           className="font-serif text-[clamp(44px,8vw,112px)] italic leading-none text-[#0A0A0A] no-underline hover:text-[#E5480B]"
