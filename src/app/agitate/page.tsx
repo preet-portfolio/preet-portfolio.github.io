@@ -39,7 +39,7 @@ export default function AgitatePage() {
                     </div>
 
                     <p className="text-lg leading-relaxed text-slate-400 max-w-2xl mb-6">
-                        Take a photo and it prints as a blank instant-film card. Nothing on it yet — just white.
+                        Take a photo and it prints as a blank instant-film card. Nothing on it yet.
                     </p>
                     <p className="text-lg leading-relaxed text-slate-400 max-w-2xl mb-8">
                         Then you shake your phone, and the picture comes through. Agitate reads the motion sensors in real
@@ -131,8 +131,9 @@ export default function AgitatePage() {
                     <h2 className="text-2xl font-semibold text-slate-200 mb-4">Nothing Leaves Your Device</h2>
                     <p className="text-slate-400 leading-relaxed max-w-2xl">
                         Agitate contains no networking code: no accounts, no analytics, no third-party SDKs, and no ads. Your
-                        photos and prints are stored in the app&apos;s private storage on your iPhone, and they only go
-                        somewhere else when you choose to share or save one.
+                        photos and prints are stored in the app&apos;s private storage on your iPhone, and your
+                        iPhone&apos;s backups include them too. Apart from that, they only go somewhere else when you
+                        choose to share or save one.
                     </p>
                 </section>
 
