@@ -29,7 +29,7 @@ export default function DeflatePrivacyPage() {
 
                 <header className="mb-12">
                     <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-200 mb-2">Deflate Privacy Policy</h1>
-                    <p className="text-sm text-slate-500">Last updated: August 28, 2026</p>
+                    <p className="text-sm text-slate-500">Last updated: November 1, 2026</p>
                 </header>
 
                 <p className="text-lg text-slate-300 leading-relaxed mb-12">
@@ -55,7 +55,7 @@ export default function DeflatePrivacyPage() {
                         mechanism for reaching the internet, and it contains no outbound URL.
                     </p>
                     <p>
-                        This is verified against the source before every release, and it is the reason the app can make this
+                        This was checked against the source for version 1.0, and it is the reason the app can make this
                         promise as a fact about how it is built rather than as a policy commitment you have to trust.
                     </p>
                 </Section>
