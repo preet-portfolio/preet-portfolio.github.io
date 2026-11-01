@@ -40,13 +40,21 @@ export function Card({ title, className = "", children }: { title?: string; clas
     );
 }
 
-// One item in a card, under a hairline like a row on the home page.
-export function Row({ title, children }: { title: string; children: React.ReactNode }) {
-    return (
-        <div className="grid gap-2 border-t border-rule py-5 last:pb-0 lg:grid-cols-[2fr_3fr] lg:gap-8">
-            <h3 className="text-name font-medium text-ink">{title}</h3>
+// One item in a card, under a hairline like a row on the home page. With an href the whole
+// row is the link, and its name takes the accent on hover as an open row does.
+export function Row({ title, level = "h3", href, children }: { title: string; level?: "h2" | "h3"; href?: string; children: React.ReactNode }) {
+    const Heading = level;
+    const className = "grid gap-2 border-t border-rule py-5 first:border-t-0 first:pt-0 last:pb-0 lg:grid-cols-[2fr_3fr] lg:gap-8";
+    const content = (
+        <>
+            <Heading className={`text-name font-medium text-ink ${href ? "group-hover:text-accent-deep" : ""}`}>{title}</Heading>
             <div className="space-y-3">{children}</div>
-        </div>
+        </>
+    );
+    return href ? (
+        <a href={href} target="_blank" rel="noopener noreferrer" className={`group no-underline ${className}`}>{content}</a>
+    ) : (
+        <div className={className}>{content}</div>
     );
 }
 
