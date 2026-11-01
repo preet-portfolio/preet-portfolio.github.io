@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { backHref } from "@/data/work";
 import { ArrowLeft, Play, Droplets, Orbit, Type, FlaskConical } from "lucide-react";
 
 export const metadata = {
@@ -20,7 +21,7 @@ export default function InteractiveMediaGalleryPage() {
 
                 {/* Back navigation */}
                 <nav className="mb-12">
-                    <Link href="/#projects" className="inline-flex items-center gap-2 text-sm font-semibold tracking-wide text-slate-400 hover:text-orange-300 transition-colors focus-ring rounded-md">
+                    <Link href={backHref("hand")} className="inline-flex items-center gap-2 text-sm font-semibold tracking-wide text-slate-400 hover:text-orange-300 transition-colors focus-ring rounded-md">
                         <ArrowLeft className="w-4 h-4" />
                         Back to Portfolio
                     </Link>
