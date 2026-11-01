@@ -67,4 +67,5 @@ export function AppStoreBadge({ href, name }: { href: string; name: string }) {
 }
 
 export const link = "text-ink underline underline-offset-4 hover:text-accent-deep";
+export const quietLink = "text-muted underline underline-offset-4 hover:text-accent-deep";
 export const note = "font-mono text-xs text-muted";
