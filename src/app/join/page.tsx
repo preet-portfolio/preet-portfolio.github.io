@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { backHref } from "@/data/work";
-import { ArrowLeft } from "lucide-react";
+import { AppStoreBadge } from "@/components/Page";
 
 export const metadata: Metadata = {
     title: "Get DocFort",
@@ -11,48 +11,24 @@ export const metadata: Metadata = {
     },
 };
 
+// A page that only hands people on to the App Store, so it stands alone and centred, with the
+// way back after the badge rather than in the header.
 export default function JoinPage() {
     return (
-        <div className="min-h-screen bg-slate-900 text-slate-300 antialiased flex flex-col items-center justify-center px-6">
-            {/* Subtle background gradient */}
-            <div className="fixed inset-0 pointer-events-none z-0">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-teal-900/10 via-slate-900/0 to-slate-900/0" />
-            </div>
-
-            <main className="relative z-10 max-w-md w-full text-center">
-                {/* Logo */}
-                <div className="mb-8 flex justify-center">
-                    <div className="h-20 w-20 rounded-[22px] bg-white flex items-center justify-center shadow-[0_4px_24px_rgba(0,143,214,0.25)] overflow-hidden">
-                        <img src="/docfort-logo.png" alt="DocFort" className="w-full h-full object-cover" />
-                    </div>
-                </div>
-
-                <h1 className="text-3xl font-bold text-slate-200 tracking-tight">DocFort</h1>
-                <p className="mt-3 text-slate-400 leading-relaxed">
+        <div className="flex min-h-screen flex-col items-center justify-center overflow-x-clip px-4 py-16 text-center md:px-6">
+            <main className="w-full max-w-reading">
+                <img src="/docfort-logo.png" alt="DocFort" className="mx-auto mb-8 h-20 w-20 rounded-icon object-cover shadow-icon md:h-24 md:w-24" />
+                <h1 className="text-display font-semibold text-ink">DocFort</h1>
+                <p className="mt-4 text-name font-medium text-muted md:mt-6">
                     Get DocFort, the privacy-first document vault for iPhone and iPad, on the App Store.
                 </p>
 
-                <a
-                    href="https://apps.apple.com/app/docfort/id6759193013"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-8 inline-block transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-teal-400/50 rounded-xl"
-                    aria-label="Download DocFort on the App Store"
-                >
-                    <img
-                        src="/app-store-badge-black.svg"
-                        alt="Download on the App Store"
-                        className="h-12 w-auto"
-                    />
-                </a>
-
-                {/* Back link */}
                 <div className="mt-10">
-                    <Link
-                        href={backHref("docfort")}
-                        className="inline-flex items-center gap-1.5 text-sm text-slate-500 hover:text-teal-300 transition-colors"
-                    >
-                        <ArrowLeft className="w-3.5 h-3.5" />
+                    <AppStoreBadge href="https://apps.apple.com/app/docfort/id6759193013" name="DocFort" />
+                </div>
+
+                <div className="mt-10 font-mono text-nav">
+                    <Link href={backHref("docfort")} className="p-3 text-muted no-underline hover:text-accent">
                         Back to portfolio
                     </Link>
                 </div>
