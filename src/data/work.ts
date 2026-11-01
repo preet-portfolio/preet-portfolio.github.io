@@ -23,7 +23,7 @@ export const projects = items.filter((i) => i.group === "projects");
 
 // App Store Connect campaign link. Both tokens are needed for the visit to show up in
 // App Analytics; the provider token is the same for every app on the account.
-const PROVIDER_TOKEN = "";
+const PROVIDER_TOKEN = "128521273";
 const CAMPAIGN = "portfolio-home";
 
 export function appStoreUrl(item: Item) {
