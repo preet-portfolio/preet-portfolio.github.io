@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import CursorSpotlight from "@/components/CursorSpotlight";
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
+const geist = Geist({ subsets: ["latin"], variable: "--font-geist" });
+const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-geist-mono" });
+const instrumentSerif = Instrument_Serif({ subsets: ["latin"], weight: "400", style: "italic", variable: "--font-instrument" });
 
 export const metadata: Metadata = {
   title: "Preet Panchal — Builder",
@@ -19,8 +18,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={`${inter.variable} font-sans antialiased text-[var(--text-secondary)] bg-[var(--bg-primary)] leading-relaxed selection:bg-[var(--teal-300)] selection:text-slate-900`}>
+    <html lang="en" className={`${geist.variable} ${geistMono.variable} ${instrumentSerif.variable} scroll-smooth`}>
+      <body className="bg-paper font-sans leading-relaxed text-ink antialiased selection:bg-accent selection:text-surface">
         <CursorSpotlight />
         {children}
       </body>
