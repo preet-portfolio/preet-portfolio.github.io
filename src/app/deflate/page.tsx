@@ -3,9 +3,9 @@ import { backHref } from "@/data/work";
 import { ArrowLeft, Shrink, Scale, FileText, Layers, Lock, LifeBuoy, Crop, ScanText } from "lucide-react";
 
 export const metadata = {
-    title: "Deflate | PDFs and Photos, at the Size You Were Asked For",
+    title: "Deflate | PDFs and Photos, Aimed at the Size You Were Asked For",
     description:
-        "Deflate compresses PDFs and images down to a size you name in kilobytes, then tells you honestly what it reached. Crop a passport photo to spec, make a scan searchable, merge, split, rotate — entirely on device, with no network code at all.",
+        "Deflate compresses PDFs and images down to a size you name in kilobytes, then shows you the size it reached. Crop a passport photo to spec, make a scan searchable, merge, split, rotate — entirely on device, with no network code at all.",
 };
 
 export default function DeflatePage() {
@@ -36,7 +36,7 @@ export default function DeflatePage() {
                         />
                         <div>
                             <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-slate-200 mb-3">Deflate</h1>
-                            <p className="text-xl sm:text-2xl text-slate-400 font-light tracking-tight">PDFs and photos, at the size you were asked for</p>
+                            <p className="text-xl sm:text-2xl text-slate-400 font-light tracking-tight">PDFs and photos, aimed at the size you were asked for</p>
                         </div>
                     </div>
 
@@ -46,8 +46,8 @@ export default function DeflatePage() {
                     </p>
                     <p className="text-lg leading-relaxed text-slate-400 max-w-2xl mb-8">
                         Nobody gave you a quality slider. They gave you a <em className="text-slate-300">number</em>. Deflate
-                        is built around that number — for PDFs and photos alike — and it is honest with you about the one
-                        thing every other compressor quietly lies about: whether it actually got there.
+                        is built around that number — for PDFs and photos alike — and when it hands you back a single
+                        file, it tells you plainly whether it got there.
                     </p>
 
                     <div className="flex flex-wrap items-center gap-4">
@@ -74,22 +74,12 @@ export default function DeflatePage() {
                     <div className="rounded-2xl bg-slate-800/30 border border-slate-700/50 p-6 md:p-10">
                         <p className="text-xs font-semibold uppercase tracking-widest text-violet-400/80 mb-6">What the result screen actually says</p>
                         <div className="rounded-xl bg-black/50 p-5 max-w-md font-mono text-[11px] sm:text-xs leading-relaxed text-white/90">
-                            <p className="text-violet-300 font-semibold mb-3">◆ Deflate</p>
-                            <p className="text-white/60 mb-3">Bachelor_1st_Year.pdf · 4 pages</p>
+                            <p className="text-amber-300 font-semibold">187 KB — smallest safe size for this content (aimed for 40 KB)</p>
                             <div className="h-px bg-white/10 my-3"></div>
-                            <div className="flex justify-between"><span className="text-white/60">Original</span><span>9.6 MB</span></div>
-                            <div className="flex justify-between"><span className="text-white/60">Target</span><span>40 KB</span></div>
-                            <div className="flex justify-between"><span className="text-white/60">Reached</span><span className="text-amber-300">187 KB</span></div>
-                            <div className="h-px bg-white/10 my-3"></div>
-                            <p className="text-amber-300/90">Above target — 98% smaller</p>
-                            <p className="text-white/50 mt-1">
-                                40 KB isn&apos;t reachable for this scan without
-                                dropping below readable. This is the smallest
-                                legible result.
-                            </p>
+                            <p className="text-white/60">↓ 9643 KB smaller (−98%) · was 9830 KB</p>
                         </div>
                         <p className="text-sm text-slate-500 mt-4">
-                            No fake success, no silent degradation. The number you see is the number the file is.
+                            The number you see is the number the file is.
                         </p>
                     </div>
                 </section>
@@ -115,11 +105,11 @@ export default function DeflatePage() {
                             <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-violet-400/10 text-violet-300">
                                 <Shrink className="h-6 w-6" />
                             </div>
-                            <h3 className="text-xl font-medium text-slate-200 mb-3">A Legibility Floor</h3>
+                            <h3 className="text-xl font-medium text-slate-200 mb-3">When the Target Is Out of Reach</h3>
                             <p className="text-slate-400 leading-relaxed text-sm">
-                                Every target has a point past which hitting the number means destroying the page. Deflate stops
-                                there, hands back the smallest readable result, and says plainly what it reached versus what you
-                                aimed for — instead of shipping a ruined file that technically complies.
+                                Not every target can be reached. When one can&apos;t, Deflate stops at its lowest setting and
+                                hands back the smallest file it can make. For a single file, it says plainly what it reached
+                                versus what you aimed for.
                             </p>
                         </div>
 
@@ -153,9 +143,9 @@ export default function DeflatePage() {
                             </div>
                             <h3 className="text-xl font-medium text-slate-200 mb-3">Scans That Can Be Searched</h3>
                             <p className="text-slate-400 leading-relaxed text-sm">
-                                Make Searchable reads the text in a scan and lays an invisible, selectable layer over it. The
-                                page looks identical — but now it&apos;s findable, and the text can be copied out. Recognition
-                                runs on your device; nothing is sent anywhere to be read.
+                                Make Searchable reads the text in a scan, redraws each page as an image and lays an invisible,
+                                selectable layer of text over it. Now the scan is findable, and the text can be copied out.
+                                Recognition runs on your device; nothing is sent anywhere to be read.
                             </p>
                         </div>
 

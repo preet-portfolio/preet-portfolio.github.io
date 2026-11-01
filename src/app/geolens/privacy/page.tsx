@@ -28,7 +28,7 @@ export default function GeoLensPrivacyPage() {
 
                 <header className="mb-12">
                     <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-200 mb-2">GeoLens Privacy Policy</h1>
-                    <p className="text-sm text-slate-500">Last updated: September 19, 2026</p>
+                    <p className="text-sm text-slate-500">Last updated: November 1, 2026</p>
                 </header>
 
                 <p className="text-lg text-slate-300 leading-relaxed mb-12">
@@ -37,12 +37,12 @@ export default function GeoLensPrivacyPage() {
 
                 <Section title="What GeoLens accesses, and why">
                     <ul className="list-disc pl-5 space-y-3">
-                        <li><strong className="text-slate-300">Camera</strong> — to capture the photos you take. Photos are processed entirely on your device.</li>
+                        <li><strong className="text-slate-300">Camera</strong> — to capture the photos you take with the back or front camera (a selfie showing you on site). Photos, including any faces in them, are processed entirely on your device and never uploaded.</li>
                         <li><strong className="text-slate-300">Precise location</strong> — to stamp coordinates, altitude, heading, and address onto your photos and into their EXIF metadata. Location is read only while GeoLens is open on screen, never in the background, and is never transmitted to us.</li>
-                        <li><strong className="text-slate-300">Photo library (add-only)</strong> — to save your stamped photos. GeoLens cannot read your existing photos.</li>
+                        <li><strong className="text-slate-300">Photo library (add-only)</strong> — to save your stamped photos. GeoLens can&apos;t see your photo library. It only gets a photo you pick as your logo.</li>
                         <li><strong className="text-slate-300">Weather (Apple Weather)</strong> — your capture coordinates are sent to Apple&apos;s WeatherKit service to fetch current conditions, subject to <a href="https://www.apple.com/legal/privacy/" className="text-sky-400 hover:text-sky-300" target="_blank" rel="noopener noreferrer">Apple&apos;s privacy policy</a>.</li>
                         <li><strong className="text-slate-300">Maps (Apple Maps)</strong> — capture coordinates are used with Apple&apos;s MapKit to render the map tile on your stamp and reverse-geocode the address, subject to Apple&apos;s privacy policy.</li>
-                        <li><strong className="text-slate-300">Sign in with Apple (optional)</strong> — used solely to fill in your name for the &quot;By:&quot; line on stamps; you can type it yourself instead. GeoLens reads only your name, never your email or Apple ID, stores it on your device only, and you can remove it at any time in Settings.</li>
+                        <li><strong className="text-slate-300">Sign in with Apple (optional)</strong> — used solely to fill in your name for the &quot;By:&quot; line on stamps; you can type it yourself instead. GeoLens reads only your name, never your email or Apple ID, and stores it on your device only.</li>
                     </ul>
                 </Section>
 
@@ -80,8 +80,8 @@ export default function GeoLensPrivacyPage() {
                         access to them.</strong>
                     </p>
                     <p>
-                        If you prefer GeoLens data not to be backed up at all, you can turn GeoLens off in Settings → [your name] → iCloud →
-                        Manage Storage → Backups.
+                        If you prefer GeoLens data not to be backed up at all, go to Settings → [your name] → iCloud → Storage (or
+                        Manage Account Storage) → Backups, choose this iPhone, and turn GeoLens off.
                     </p>
                     <p>
                         Stamped photos you save to your photo library are covered by your Photos backup settings, not by GeoLens.
@@ -95,16 +95,13 @@ export default function GeoLensPrivacyPage() {
                     </p>
                 </Section>
 
-                <Section title="Your control">
-                    <p>
-                        Deleting a capture in GeoLens removes it from the app&apos;s storage (copies you saved to your Photos library remain yours,
-                        under your control).
-                    </p>
+                <Section title="Deleting your data">
                     <p>
                         <strong className="text-slate-300">Settings → Delete All Data</strong> erases every capture and its metadata, your name,
-                        your attested site, your stamp design and logo, and your gallery names from the device. The capture database is
-                        destroyed rather than emptied, so deleted captures can&apos;t be recovered from it or from later backups. Photos you saved
-                        to your photo library, the free-tier capture counter, and your subscription are not affected.
+                        your attested site, your stamp design and logo, and your gallery names from the device. On iOS 18 and later the
+                        capture database is destroyed rather than emptied, so deleted captures can&apos;t be recovered from it or from later
+                        backups; on iOS 17 it is emptied instead. Photos you saved to your photo library, the free-tier capture counter, and
+                        your subscription are not affected.
                     </p>
                     <p>
                         Uninstalling GeoLens removes your captures and settings, but iOS keeps Keychain items — your name and attested

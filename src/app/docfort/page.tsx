@@ -4,7 +4,7 @@ import { ArrowLeft, ShieldCheck, Clock, Layers, Users, ExternalLink } from "luci
 
 export const metadata = {
     title: "DocFort | Digital Document Vault",
-    description: "A deep dive into DocFort: The privacy-first document vault for iPhone, iPad, and Mac.",
+    description: "A deep dive into DocFort: The privacy-first document vault for iPhone and iPad.",
 };
 
 export default function DocFortPage() {
@@ -34,12 +34,12 @@ export default function DocFortPage() {
                         </div>
                         <div>
                             <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-slate-200 mb-3">DocFort</h1>
-                            <p className="text-xl sm:text-2xl text-slate-400 font-light tracking-tight">The Digital Vault for Life's Critical Documents</p>
+                            <p className="text-xl sm:text-2xl text-slate-400 font-light tracking-tight">A Vault for the Details of Life's Critical Documents</p>
                         </div>
                     </div>
 
                     <p className="text-lg leading-relaxed text-slate-400 max-w-2xl mb-8">
-                        An underserved premium consumer market exists for intelligent document protection platforms. DocFort is not just a tracker; it's a privacy-first Digital Vault designed to combine Swiss-bank security with Apple's intelligent on-device processing to solve the "Traveler's Nightmare" of missed expirations.
+                        An underserved premium consumer market exists for intelligent document protection platforms. DocFort is not just a tracker; it's a privacy-first Digital Vault designed around Apple's intelligent on-device processing to solve the "Traveler's Nightmare" of missed expirations.
                     </p>
 
                     <div className="flex flex-wrap gap-4">
@@ -72,7 +72,7 @@ export default function DocFortPage() {
                             </div>
                             <h3 className="text-xl font-medium text-slate-200 mb-3">The "Extract & Discard" Privacy Model</h3>
                             <p className="text-slate-400 leading-relaxed text-sm">
-                                DocFort does not store your document images. Instead, the Vision framework securely reads the expiration date via on-device Neural Engine processing, saves the metadata (barely 24 bytes), and immediately securely trashes the photograph. Zero evidence left behind.
+                                DocFort does not store your document images. Instead, Vision reads the document on your device, and DocFort saves the details you confirm, never the photo.
                             </p>
                         </div>
 
@@ -94,7 +94,7 @@ export default function DocFortPage() {
                             </div>
                             <h3 className="text-xl font-medium text-slate-200 mb-3">Bento Grid Dashboards</h3>
                             <p className="text-slate-400 leading-relaxed text-sm">
-                                Taking heavy influence from Apple's 2025/2026 design principles. The interface uses a Liquid Glass aesthetic for frosted document cards hidden safely behind a Face ID lock. The UI is calm, precise, and devoid of bouncy animations—fitting the demeanor of a Swiss Bank.
+                                Taking heavy influence from Apple's 2025/2026 design principles. The interface uses Liquid Glass, and the vault can sit behind an optional Face ID lock. The UI is calm and precise.
                             </p>
                         </div>
 
@@ -105,7 +105,7 @@ export default function DocFortPage() {
                             </div>
                             <h3 className="text-xl font-medium text-slate-200 mb-3">Three-Generation Vault</h3>
                             <p className="text-slate-400 leading-relaxed text-sm">
-                                Designed as a living document management system that scales. Supporting age-appropriate document suggestions (Medicare cards for grandparents, passports for parents, birth certificates for children) combined into a singular, unified timeline view.
+                                Designed as a living document management system that scales: documents for the whole family, combined into a singular, unified timeline view.
                             </p>
                         </div>
 

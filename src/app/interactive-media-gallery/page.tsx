@@ -116,7 +116,7 @@ export default function InteractiveMediaGalleryPage() {
                             <h2 className="text-xl font-semibold text-slate-200">Checked, not claimed</h2>
                         </div>
                         <ul className="space-y-3 text-sm leading-relaxed text-slate-400">
-                            <li><span className="text-slate-200">Marbling&apos;s maths</span> on the GPU matches an independent Python reference on 99.97% of pixels away from ink edges.</li>
+                            <li><span className="text-slate-200">Marbling&apos;s maths</span> on the GPU was checked against an independent Python reference, pixel by pixel, away from ink edges.</li>
                             <li><span className="text-slate-200">Light bending</span> matches the exact orbit integral to a median 1.5 parts per million, and finds the critical impact parameter √27⁄2 to within 0.001%.</li>
                             <li><span className="text-slate-200">Einstein vs Newton:</span> far from the hole, light bends 2.007 times as much as Newton predicts, the factor of two the 1919 eclipse confirmed.</li>
                             <li><span className="text-slate-200">The black hole&apos;s shadow</span> measures 2.60 times the horizon, within 0.012% of the closed-form size.</li>

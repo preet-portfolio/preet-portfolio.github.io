@@ -3,8 +3,8 @@ import { backHref } from "@/data/work";
 import { ArrowLeft, Search, GitMerge, FileText, ShieldCheck, ExternalLink } from "lucide-react";
 
 export const metadata = {
-    title: "AuditWedge | Cross-Border Margin Audit",
-    description: "A deep dive into AuditWedge: the SKU-level margin-leak audit tool for cross-border e-commerce sellers.",
+    title: "AuditWedge | SKU-Level Margin Audit",
+    description: "A deep dive into AuditWedge: the SKU-level margin-leak audit tool for e-commerce sellers.",
 };
 
 export default function AuditWedgePage() {
@@ -34,7 +34,7 @@ export default function AuditWedgePage() {
                         </div>
                         <div>
                             <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-slate-200 mb-3">AuditWedge</h1>
-                            <p className="text-xl sm:text-2xl text-slate-400 font-light tracking-tight">A margin-leak audit tool for cross-border e-commerce sellers</p>
+                            <p className="text-xl sm:text-2xl text-slate-400 font-light tracking-tight">A margin-leak audit tool for e-commerce sellers</p>
                         </div>
                     </div>
 
@@ -42,8 +42,8 @@ export default function AuditWedgePage() {
                         Supplier invoices are messy, FX markup is often invisible, and per-SKU
                         profitability gets lost between three disconnected systems — the supplier
                         invoice, the Shopify checkout, and the payout statement. AuditWedge
-                        reconciles all three at the SKU level to surface where margin is actually
-                        leaking.
+                        reconciles supplier invoices with Shopify orders at the SKU level to surface
+                        where margin is actually leaking.
                     </p>
 
                     <p className="text-base leading-relaxed text-amber-400/90 max-w-2xl mb-8 font-medium">
@@ -84,8 +84,7 @@ export default function AuditWedgePage() {
                             <h3 className="text-xl font-medium text-slate-200 mb-3">Invoice Extraction</h3>
                             <p className="text-slate-400 leading-relaxed text-sm">
                                 Claude-based structured extraction of SKU, quantity, unit price, and
-                                currency from unstructured supplier invoices, with a confidence score
-                                on every field and no invented values.
+                                currency from unstructured supplier invoices, with no invented values.
                             </p>
                         </div>
 
@@ -110,7 +109,7 @@ export default function AuditWedgePage() {
                             <p className="text-slate-400 leading-relaxed text-sm">
                                 Computes per-SKU contribution margin and flags supplier price drift,
                                 ranked by dollar impact, with every flagged leak citing its source
-                                invoice line and order.
+                                invoice and order.
                             </p>
                         </div>
 
@@ -120,9 +119,8 @@ export default function AuditWedgePage() {
                             </div>
                             <h3 className="text-xl font-medium text-slate-200 mb-3">Trust-First by Design</h3>
                             <p className="text-slate-400 leading-relaxed text-sm">
-                                Every claim in the output carries a confidence score and a traceable
-                                source record; ambiguous cases are flagged for review, never silently
-                                resolved either way.
+                                Every claim in the output carries a traceable source record; ambiguous
+                                cases are flagged for review, never silently resolved either way.
                             </p>
                         </div>
 
