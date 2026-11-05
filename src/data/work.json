@@ -75,7 +75,7 @@
       "id": "ladder",
       "group": "projects",
       "name": "Infrastructure Ladder",
-      "line": "Ten pieces of infrastructure rebuilt in .NET from their specs, each graded by someone else’s tests.",
+      "line": "Rebuilding ten pieces of infrastructure in .NET from their specs, each graded by someone else’s tests. Three of ten are done.",
       "status": "In progress",
       "kind": "Infrastructure in .NET",
       "links": [
