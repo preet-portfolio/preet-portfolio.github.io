@@ -70,7 +70,7 @@ export default function HelloChainPage() {
                 <ul className="divide-y divide-rule border-t border-rule">
                     <li className="py-3"><span className="font-semibold">Unit, fuzz and invariant tests:</span> the entry and visitor counts only ever go up.</li>
                     <li className="py-3"><span className="font-semibold">Halmos</span> proves the same symbolically, for every input on the direct path.</li>
-                    <li className="py-3"><span className="font-semibold">Slither</span> static analysis runs on every change.</li>
+                    <li className="py-3"><span className="font-semibold">Slither</span> static analysis runs on every change to the project.</li>
                     <li className="py-3"><span className="font-semibold">End to end:</span> a Playwright test signs a hello with a virtual authenticator and sees it reach the feed.</li>
                     <li className="py-3"><span className="font-semibold">CI:</span> GitHub Actions runs all of it, for the contract and the web app.</li>
                 </ul>
