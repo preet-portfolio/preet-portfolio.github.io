@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Hello, Chain: a vermilion seal stamped with two linked rings. Original artwork. -->
+  <circle cx="16" cy="16" r="15" fill="#b23a0e"/>
+  <circle cx="16" cy="16" r="12.6" fill="none" stroke="#fffcf6" stroke-opacity=".35" stroke-width="1"/>
+  <rect x="6.6" y="12.2" width="11" height="7.6" rx="3.8" fill="none" stroke="#fffcf6" stroke-width="2.4"/>
+  <rect x="14.4" y="12.2" width="11" height="7.6" rx="3.8" fill="none" stroke="#fffcf6" stroke-width="2.4"/>
+</svg>

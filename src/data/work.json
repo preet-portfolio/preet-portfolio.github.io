@@ -61,6 +61,19 @@
       ]
     },
     {
+      "id": "hello-chain",
+      "group": "projects",
+      "name": "Hello, Chain",
+      "page": "/hello-chain/",
+      "icon": "/hello-chain-logo.svg",
+      "line": "A guestbook on a blockchain. Sign your hello with Face ID: no wallet, no crypto, no fees.",
+      "status": "Testnet deploy coming soon",
+      "kind": "On-chain guestbook",
+      "links": [
+        { "label": "Source", "href": "https://github.com/preet-portfolio/hello-chain" }
+      ]
+    },
+    {
       "id": "sky",
       "group": "projects",
       "name": "I found something in the sky",
