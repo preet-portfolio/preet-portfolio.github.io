@@ -5,7 +5,7 @@ import { join, dirname } from "node:path";
 
 const OUT = new URL("../out/", import.meta.url).pathname;
 // Other GitHub Pages sites share this domain; this repo doesn't build them.
-const OTHER_SITES = ["/agitate-support/", "/docfort-support/"];
+const OTHER_SITES = ["/agitate-support/", "/docfort-support/", "/football-analytics-sql/"];
 
 async function htmlFiles(dir) {
     const entries = await readdir(dir, { withFileTypes: true });
