@@ -64,6 +64,7 @@
       "id": "football-sql",
       "group": "projects",
       "name": "World Cup 2022 in SQL",
+      "icon": "/football-sql-logo.svg",
       "line": "Every event of the 2022 World Cup, from StatsBomb’s open data, in Postgres. Checked against the real scores, with a SQL playground that runs in your browser.",
       "status": "Live on the web",
       "kind": "SQL and data modelling",
