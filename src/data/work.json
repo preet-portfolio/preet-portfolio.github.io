@@ -61,6 +61,19 @@
       ]
     },
     {
+      "id": "football-sql",
+      "group": "projects",
+      "name": "World Cup 2022 in SQL",
+      "line": "Every event of the 2022 World Cup, from StatsBomb’s open data, in Postgres. Checked against the real scores, with a SQL playground that runs in your browser.",
+      "status": "Live on the web",
+      "kind": "SQL and data modelling",
+      "links": [
+        { "label": "Open the playground", "href": "https://preet-portfolio.github.io/football-analytics-sql/playground/" },
+        { "label": "See the checks", "href": "https://preet-portfolio.github.io/football-analytics-sql/" },
+        { "label": "Source", "href": "https://github.com/preet-portfolio/football-analytics-sql" }
+      ]
+    },
+    {
       "id": "hello-chain",
       "group": "projects",
       "name": "Hello, Chain",
