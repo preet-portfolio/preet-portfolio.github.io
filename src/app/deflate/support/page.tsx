@@ -1,12 +1,13 @@
+import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import { link } from "@/components/Page";
 import { Reading, Section, lead } from "@/components/Reading";
 
-export const metadata = {
+export const metadata = pageMeta("/deflate/support/", {
     title: "Deflate — Support",
     description:
         "Help with Deflate: why a target size wasn't reached, why a multi-page PDF exported as several JPEGs, colour vs black & white, and how to get in touch.",
-};
+});
 
 function Faq({ question, children }: { question: string; children: React.ReactNode }) {
     return (

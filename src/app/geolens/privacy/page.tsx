@@ -1,10 +1,11 @@
+import { pageMeta } from "@/lib/seo";
 import { link } from "@/components/Page";
 import { Reading, Section, lead, list } from "@/components/Reading";
 
-export const metadata = {
+export const metadata = pageMeta("/geolens/privacy/", {
     title: "GeoLens — Privacy Policy",
     description: "GeoLens privacy policy: no data collection, no servers, no trackers. Your photos and location never reach us.",
-};
+});
 
 export default function GeoLensPrivacyPage() {
     return (

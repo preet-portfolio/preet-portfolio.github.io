@@ -1,11 +1,12 @@
+import { pageMeta } from "@/lib/seo";
 import { backHref } from "@/data/work";
 import { AppStoreBadge, Card, Hero, Labels, Page, Row, link } from "@/components/Page";
 
-export const metadata = {
+export const metadata = pageMeta("/agitate/", {
     title: "Agitate | Shake to Develop",
     description:
         "Agitate turns your iPhone into an instant camera. Take a photo, watch it print as a blank film card, then shake your phone to develop it. Everything stays on your device. Available on the App Store.",
-};
+});
 
 export default function AgitatePage() {
     return (

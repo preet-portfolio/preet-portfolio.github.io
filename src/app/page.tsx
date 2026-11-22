@@ -1,6 +1,12 @@
 import Link from "next/link";
 import WorkGroup from "@/components/WorkGroup";
 import { apps, projects } from "@/data/work";
+import { pageMeta } from "@/lib/seo";
+
+export const metadata = pageMeta("/", {
+  title: "Preet Panchal — Builder",
+  description: "I build software that respects the people who use it — from privacy-first iOS apps to trust-first business tools.",
+});
 
 const navLink = "p-3 text-muted no-underline hover:text-accent";
 

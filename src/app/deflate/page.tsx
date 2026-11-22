@@ -1,12 +1,13 @@
+import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import { backHref } from "@/data/work";
 import { Card, Hero, Labels, Page, Row, link, note } from "@/components/Page";
 
-export const metadata = {
+export const metadata = pageMeta("/deflate/", {
     title: "Deflate | PDFs and Photos, Aimed at the Size You Were Asked For",
     description:
         "Deflate compresses PDFs and images down to a size you name in kilobytes, then shows you the size it reached. Crop a passport photo to spec, make a scan searchable, merge, split, rotate — entirely on device, with no network code at all.",
-};
+});
 
 export default function DeflatePage() {
     return (

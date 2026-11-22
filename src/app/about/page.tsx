@@ -1,11 +1,11 @@
-import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import { Reading, lead } from "@/components/Reading";
 import { link } from "@/components/Page";
 
-export const metadata: Metadata = {
+export const metadata = pageMeta("/about/", {
     title: "Preet Panchal — About",
     description: "I build apps and tools, with help from AI. None of my apps collects your data, runs analytics or tracks you.",
-};
+});
 
 // One short page in Preet's own words. The line about the apps is what all four privacy
 // policies say. It stops short of "nothing leaves your phone", because GeoLens sends a location

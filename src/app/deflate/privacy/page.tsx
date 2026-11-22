@@ -1,12 +1,13 @@
+import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import { link } from "@/components/Page";
 import { Reading, Section, lead, list } from "@/components/Reading";
 
-export const metadata = {
+export const metadata = pageMeta("/deflate/privacy/", {
     title: "Deflate — Privacy Policy",
     description:
         "Deflate privacy policy: no data collection, no servers, no trackers, no network code at all. Your documents never leave your device.",
-};
+});
 
 export default function DeflatePrivacyPage() {
     return (

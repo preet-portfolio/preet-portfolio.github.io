@@ -1,10 +1,11 @@
+import { pageMeta } from "@/lib/seo";
 import { backHref } from "@/data/work";
 import { AppStoreBadge, Card, Hero, Page, Row, link, quietLink } from "@/components/Page";
 
-export const metadata = {
+export const metadata = pageMeta("/docfort/", {
     title: "DocFort | Digital Document Vault",
     description: "A deep dive into DocFort: The privacy-first document vault for iPhone and iPad.",
-};
+});
 
 export default function DocFortPage() {
     return (

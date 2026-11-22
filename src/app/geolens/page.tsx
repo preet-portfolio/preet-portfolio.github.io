@@ -1,11 +1,12 @@
+import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import { backHref } from "@/data/work";
 import { AppStoreBadge, Card, Hero, Labels, Page, Row, link, note } from "@/components/Page";
 
-export const metadata = {
+export const metadata = pageMeta("/geolens/", {
     title: "GeoLens | Geotagged Photos with an Audit Trail",
     description: "GeoLens stamps every photo with coordinates, address, a map of the spot, and an EXIF audit trail. Built for surveyors, valuers, and field inspectors. Available on the App Store.",
-};
+});
 
 const APP_STORE = "https://apps.apple.com/us/app/geolens-geotag-camera/id6779347733";
 
