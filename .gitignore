@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Raw search answers quote third parties (namesakes, company records): keep them local.
+docs/seo/raw/

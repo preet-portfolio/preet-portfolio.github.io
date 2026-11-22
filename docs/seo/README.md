@@ -10,7 +10,7 @@ crawler before the change, what it looks like after, and the fixed question set 
 | `after-pages.json` | The same, from the export after the change |
 | `baseline-apple-lookup.json` | Apple's lookup for developer 1874836869 on 2026-11-22: the source of the store facts |
 | `questions.md` | The 22 target questions, their right answers and how to score a run |
-| `answers-YYYY-MM-DD.md` | One file per run of the questions through the engines (none yet; see below) |
+| `answers-2026-11-22.md` | The baseline run, scored per question and engine. Raw answers stay in `raw/`, which git ignores |
 
 ## Before and after, per page
 
@@ -63,8 +63,8 @@ it, what it does and what it collects.
 
 ## Not verified yet
 
-- The AI-answer baseline (`answers-YYYY-MM-DD.md`) hasn't been recorded. It has to be recorded
-  before this change is merged, or it isn't a baseline.
+- The AI-answer baseline covers Google and Bing only; ChatGPT, Perplexity and Gemini need a
+  signed-in browser.
 - Schema.org validator and Rich Results Test: to run against the live URLs after deploy.
 - Search Console and Bing Webmaster Tools: need verification codes from the sign-up.
 - Indexing and citation: only measurable 4–8 weeks after deploy.
