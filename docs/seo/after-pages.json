@@ -1,0 +1,223 @@
+[
+  {
+    "path": "/about/",
+    "title": "Preet Panchal — About",
+    "description": "I build apps and tools, with help from AI. None of my apps collects your data, runs analytics or tracks you.",
+    "canonical": [
+      "https://preet-portfolio.github.io/about/"
+    ],
+    "ogTitle": "Preet Panchal — About",
+    "jsonLd": [
+      "ProfilePage"
+    ],
+    "h1": [
+      "About"
+    ]
+  },
+  {
+    "path": "/agitate/",
+    "title": "Agitate | Shake to Develop",
+    "description": "Agitate turns your iPhone into an instant camera. Take a photo, watch it print as a blank film card, then shake your phone to develop it. Everything stays on your device. Available on the App Store.",
+    "canonical": [
+      "https://preet-portfolio.github.io/agitate/"
+    ],
+    "ogTitle": "Agitate | Shake to Develop",
+    "ogImage": "https://preet-portfolio.github.io/agitate-logo.png",
+    "jsonLd": [
+      "MobileApplication",
+      "Person"
+    ],
+    "appBanner": "app-id=6823962224",
+    "h1": [
+      "Agitate"
+    ]
+  },
+  {
+    "path": "/auditwedge/",
+    "title": "AuditWedge | SKU-Level Margin Audit",
+    "description": "A deep dive into AuditWedge: the SKU-level margin-leak audit tool for e-commerce sellers.",
+    "canonical": [
+      "https://preet-portfolio.github.io/auditwedge/"
+    ],
+    "ogTitle": "AuditWedge | SKU-Level Margin Audit",
+    "jsonLd": [],
+    "h1": [
+      "AuditWedge"
+    ]
+  },
+  {
+    "path": "/deflate/",
+    "title": "Deflate | PDFs and Photos, Aimed at the Size You Were Asked For",
+    "description": "Deflate compresses PDFs and images down to a size you name in kilobytes, then shows you the size it reached. Crop a passport photo to spec, make a scan searchable, merge, split, rotate — entirely on device, with no network code at all.",
+    "canonical": [
+      "https://preet-portfolio.github.io/deflate/"
+    ],
+    "ogTitle": "Deflate | PDFs and Photos, Aimed at the Size You Were Asked For",
+    "ogImage": "https://preet-portfolio.github.io/deflate-logo.png",
+    "jsonLd": [
+      "MobileApplication",
+      "Person"
+    ],
+    "appBanner": "app-id=6806356565",
+    "h1": [
+      "Deflate"
+    ]
+  },
+  {
+    "path": "/deflate/privacy/",
+    "title": "Deflate — Privacy Policy",
+    "description": "Deflate privacy policy: no data collection, no servers, no trackers, no network code at all. Your documents never leave your device.",
+    "canonical": [
+      "https://preet-portfolio.github.io/deflate/privacy/"
+    ],
+    "ogTitle": "Deflate — Privacy Policy",
+    "jsonLd": [],
+    "h1": [
+      "Deflate Privacy Policy"
+    ]
+  },
+  {
+    "path": "/deflate/support/",
+    "title": "Deflate — Support",
+    "description": "Help with Deflate: why a target size wasn't reached, why a multi-page PDF exported as several JPEGs, colour vs black & white, and how to get in touch.",
+    "canonical": [
+      "https://preet-portfolio.github.io/deflate/support/"
+    ],
+    "ogTitle": "Deflate — Support",
+    "jsonLd": [],
+    "h1": [
+      "Deflate Support"
+    ]
+  },
+  {
+    "path": "/docfort/",
+    "title": "DocFort | Digital Document Vault",
+    "description": "A deep dive into DocFort: The privacy-first document vault for iPhone and iPad.",
+    "canonical": [
+      "https://preet-portfolio.github.io/docfort/"
+    ],
+    "ogTitle": "DocFort | Digital Document Vault",
+    "ogImage": "https://preet-portfolio.github.io/docfort-logo.png",
+    "jsonLd": [
+      "MobileApplication",
+      "Person"
+    ],
+    "appBanner": "app-id=6759193013",
+    "h1": [
+      "DocFort"
+    ]
+  },
+  {
+    "path": "/geolens/",
+    "title": "GeoLens | Geotagged Photos with an Audit Trail",
+    "description": "GeoLens stamps every photo with coordinates, address, a map of the spot, and an EXIF audit trail. Built for surveyors, valuers, and field inspectors. Available on the App Store.",
+    "canonical": [
+      "https://preet-portfolio.github.io/geolens/"
+    ],
+    "ogTitle": "GeoLens | Geotagged Photos with an Audit Trail",
+    "ogImage": "https://preet-portfolio.github.io/geolens-logo.png",
+    "jsonLd": [
+      "MobileApplication",
+      "Person"
+    ],
+    "appBanner": "app-id=6779347733",
+    "h1": [
+      "GeoLens"
+    ]
+  },
+  {
+    "path": "/geolens/privacy/",
+    "title": "GeoLens — Privacy Policy",
+    "description": "GeoLens privacy policy: no data collection, no servers, no trackers. Your photos and location never reach us.",
+    "canonical": [
+      "https://preet-portfolio.github.io/geolens/privacy/"
+    ],
+    "ogTitle": "GeoLens — Privacy Policy",
+    "jsonLd": [],
+    "h1": [
+      "GeoLens Privacy Policy"
+    ]
+  },
+  {
+    "path": "/geolens/terms/",
+    "title": "GeoLens — Terms of Use (EULA)",
+    "description": "GeoLens terms of use: subscriptions, accuracy disclosures, and acceptable use.",
+    "canonical": [
+      "https://preet-portfolio.github.io/geolens/terms/"
+    ],
+    "ogTitle": "GeoLens — Terms of Use (EULA)",
+    "jsonLd": [],
+    "h1": [
+      "Terms of Use (EULA)"
+    ]
+  },
+  {
+    "path": "/hello-chain/",
+    "title": "Hello, Chain | An On-Chain Guestbook",
+    "description": "Hello, Chain is an on-chain guestbook: write a short hello, sign it with Face ID or a fingerprint, and it is stored for good. No wallet, no crypto, no fees.",
+    "canonical": [
+      "https://preet-portfolio.github.io/hello-chain/"
+    ],
+    "ogTitle": "Hello, Chain | An On-Chain Guestbook",
+    "jsonLd": [],
+    "h1": [
+      "Hello, Chain"
+    ]
+  },
+  {
+    "path": "/",
+    "title": "Preet Panchal — Builder",
+    "description": "I build software that respects the people who use it — from privacy-first iOS apps to trust-first business tools.",
+    "canonical": [
+      "https://preet-portfolio.github.io/"
+    ],
+    "ogTitle": "Preet Panchal — Builder",
+    "jsonLd": [
+      "WebSite",
+      "Person"
+    ],
+    "h1": [
+      "Preet Panchal"
+    ]
+  },
+  {
+    "path": "/interactive-media-gallery/",
+    "title": "The Hand Inside the Equation | Interactive Media Gallery",
+    "description": "A live gallery of interactive media studies: marbling from its maths, light bending around a black hole, and your camera drawn in text. Each piece is checked against an independent reference.",
+    "canonical": [
+      "https://preet-portfolio.github.io/interactive-media-gallery/"
+    ],
+    "ogTitle": "The Hand Inside the Equation | Interactive Media Gallery",
+    "jsonLd": [],
+    "h1": [
+      "The Hand Inside the Equation"
+    ]
+  },
+  {
+    "path": "/join/",
+    "title": "Get DocFort",
+    "description": "Get DocFort, the privacy-first document vault for iPhone and iPad, on the App Store.",
+    "canonical": [
+      "https://preet-portfolio.github.io/join/"
+    ],
+    "ogTitle": "Get DocFort",
+    "jsonLd": [],
+    "appBanner": "app-id=6759193013",
+    "h1": [
+      "DocFort"
+    ]
+  },
+  {
+    "path": "/wake/",
+    "title": "wake | A Living Drawing Instrument",
+    "description": "wake is a generative-art instrument for the browser: thousands of line-heads move through fields of force across 100,000 designs and fifteen behaviours, six of them real physics and maths simulated from their equations.",
+    "canonical": [
+      "https://preet-portfolio.github.io/wake/"
+    ],
+    "ogTitle": "wake | A Living Drawing Instrument",
+    "jsonLd": [],
+    "h1": [
+      "wake"
+    ]
+  }
+]
