@@ -50,9 +50,10 @@ it, what it does and what it collects.
 
 ## Known limits
 
-- **No rich result for the apps.** Google shows a software-app rich result only with a rating
-  or reviews, and none of the apps has a rating yet. The structured data still names the apps
-  and their maker; it won't make stars appear.
+- **Ratings are optional.** Google's Rich Results Test (2026-11-22) marks all four app pages
+  as valid Software App items, eligible for rich results, with one non-critical note each:
+  no `aggregateRating`. The apps have no App Store ratings yet, so the stars can't be added
+  honestly; Google may still show the app result without them.
 - **Agitate and DocFort have no developer website set in App Store Connect.** Apple lists one
   (`sellerUrl`) for GeoLens and Deflate, pointing to their pages here. Setting it for the other
   two ties the App Store listing back to this site from Apple's side.
@@ -61,10 +62,17 @@ it, what it does and what it collects.
   `robots.txt`, and aren't in this sitemap.
 - `llms.txt` was left out: no major engine has said it reads one.
 
+## External checks, 2026-11-22 (live site)
+
+| Page | Rich Results Test | Schema.org validator |
+|---|---|---|
+| `/agitate/`, `/deflate/`, `/geolens/`, `/docfort/` | Software App: 1 valid item each, with a non-critical note (opened for GeoLens and DocFort: no `aggregateRating`) | — |
+| `/about/` | Profile page: 1 valid item | — |
+| `/` | No rich-result types (WebSite and Person aren't ones) | WebSite with Person: 0 errors, 0 warnings |
+
 ## Not verified yet
 
 - The AI-answer baseline covers Google and Bing only; ChatGPT, Perplexity and Gemini need a
   signed-in browser.
-- Schema.org validator and Rich Results Test: to run against the live URLs after deploy.
 - Search Console and Bing Webmaster Tools: need verification codes from the sign-up.
 - Indexing and citation: only measurable 4–8 weeks after deploy.
