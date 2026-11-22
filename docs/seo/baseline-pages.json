@@ -1,0 +1,182 @@
+[
+  {
+    "path": "/about/",
+    "title": "Preet Panchal — About",
+    "description": "I build apps and tools, with help from AI. None of my apps collects your data, runs analytics or tracks you.",
+    "canonical": [],
+    "jsonLd": [],
+    "h1": [
+      "About"
+    ],
+    "liveSlash": "200",
+    "liveNoSlash": "301 → 200"
+  },
+  {
+    "path": "/agitate/",
+    "title": "Agitate | Shake to Develop",
+    "description": "Agitate turns your iPhone into an instant camera. Take a photo, watch it print as a blank film card, then shake your phone to develop it. Everything stays on your device. Available on the App Store.",
+    "canonical": [],
+    "jsonLd": [],
+    "h1": [
+      "Agitate"
+    ],
+    "liveSlash": "200",
+    "liveNoSlash": "301 → 200"
+  },
+  {
+    "path": "/auditwedge/",
+    "title": "AuditWedge | SKU-Level Margin Audit",
+    "description": "A deep dive into AuditWedge: the SKU-level margin-leak audit tool for e-commerce sellers.",
+    "canonical": [],
+    "jsonLd": [],
+    "h1": [
+      "AuditWedge"
+    ],
+    "liveSlash": "200",
+    "liveNoSlash": "301 → 200"
+  },
+  {
+    "path": "/deflate/",
+    "title": "Deflate | PDFs and Photos, Aimed at the Size You Were Asked For",
+    "description": "Deflate compresses PDFs and images down to a size you name in kilobytes, then shows you the size it reached. Crop a passport photo to spec, make a scan searchable, merge, split, rotate — entirely on device, with no network code at all.",
+    "canonical": [],
+    "jsonLd": [],
+    "h1": [
+      "Deflate"
+    ],
+    "liveSlash": "200",
+    "liveNoSlash": "301 → 200"
+  },
+  {
+    "path": "/deflate/privacy/",
+    "title": "Deflate — Privacy Policy",
+    "description": "Deflate privacy policy: no data collection, no servers, no trackers, no network code at all. Your documents never leave your device.",
+    "canonical": [],
+    "jsonLd": [],
+    "h1": [
+      "Deflate Privacy Policy"
+    ],
+    "liveSlash": "200",
+    "liveNoSlash": "301 → 200"
+  },
+  {
+    "path": "/deflate/support/",
+    "title": "Deflate — Support",
+    "description": "Help with Deflate: why a target size wasn't reached, why a multi-page PDF exported as several JPEGs, colour vs black & white, and how to get in touch.",
+    "canonical": [],
+    "jsonLd": [],
+    "h1": [
+      "Deflate Support"
+    ],
+    "liveSlash": "200",
+    "liveNoSlash": "301 → 200"
+  },
+  {
+    "path": "/docfort/",
+    "title": "DocFort | Digital Document Vault",
+    "description": "A deep dive into DocFort: The privacy-first document vault for iPhone and iPad.",
+    "canonical": [],
+    "jsonLd": [],
+    "h1": [
+      "DocFort"
+    ],
+    "liveSlash": "200",
+    "liveNoSlash": "301 → 200"
+  },
+  {
+    "path": "/geolens/",
+    "title": "GeoLens | Geotagged Photos with an Audit Trail",
+    "description": "GeoLens stamps every photo with coordinates, address, a map of the spot, and an EXIF audit trail. Built for surveyors, valuers, and field inspectors. Available on the App Store.",
+    "canonical": [],
+    "jsonLd": [],
+    "h1": [
+      "GeoLens"
+    ],
+    "liveSlash": "200",
+    "liveNoSlash": "301 → 200"
+  },
+  {
+    "path": "/geolens/privacy/",
+    "title": "GeoLens — Privacy Policy",
+    "description": "GeoLens privacy policy: no data collection, no servers, no trackers. Your photos and location never reach us.",
+    "canonical": [],
+    "jsonLd": [],
+    "h1": [
+      "GeoLens Privacy Policy"
+    ],
+    "liveSlash": "200",
+    "liveNoSlash": "301 → 200"
+  },
+  {
+    "path": "/geolens/terms/",
+    "title": "GeoLens — Terms of Use (EULA)",
+    "description": "GeoLens terms of use: subscriptions, accuracy disclosures, and acceptable use.",
+    "canonical": [],
+    "jsonLd": [],
+    "h1": [
+      "Terms of Use (EULA)"
+    ],
+    "liveSlash": "200",
+    "liveNoSlash": "301 → 200"
+  },
+  {
+    "path": "/hello-chain/",
+    "title": "Hello, Chain | An On-Chain Guestbook",
+    "description": "Hello, Chain is an on-chain guestbook: write a short hello, sign it with Face ID or a fingerprint, and it is stored for good. No wallet, no crypto, no fees.",
+    "canonical": [],
+    "jsonLd": [],
+    "h1": [
+      "Hello, Chain"
+    ],
+    "liveSlash": "200",
+    "liveNoSlash": "301 → 200"
+  },
+  {
+    "path": "/",
+    "title": "Preet Panchal — Builder",
+    "description": "I build software that respects the people who use it — from privacy-first iOS apps to trust-first business tools.",
+    "canonical": [],
+    "jsonLd": [],
+    "h1": [
+      "Preet Panchal"
+    ],
+    "liveSlash": "200"
+  },
+  {
+    "path": "/interactive-media-gallery/",
+    "title": "The Hand Inside the Equation | Interactive Media Gallery",
+    "description": "A live gallery of interactive media studies: marbling from its maths, light bending around a black hole, and your camera drawn in text. Each piece is checked against an independent reference.",
+    "canonical": [],
+    "jsonLd": [],
+    "h1": [
+      "The Hand Inside the Equation"
+    ],
+    "liveSlash": "200",
+    "liveNoSlash": "301 → 200"
+  },
+  {
+    "path": "/join/",
+    "title": "Get DocFort",
+    "description": "Get DocFort, the privacy-first document vault for iPhone and iPad, on the App Store.",
+    "canonical": [],
+    "jsonLd": [],
+    "appBanner": "app-id=6759193013",
+    "h1": [
+      "DocFort"
+    ],
+    "liveSlash": "200",
+    "liveNoSlash": "301 → 200"
+  },
+  {
+    "path": "/wake/",
+    "title": "wake | A Living Drawing Instrument",
+    "description": "wake is a generative-art instrument for the browser: thousands of line-heads move through fields of force across 100,000 designs and fifteen behaviours, six of them real physics and maths simulated from their equations.",
+    "canonical": [],
+    "jsonLd": [],
+    "h1": [
+      "wake"
+    ],
+    "liveSlash": "200",
+    "liveNoSlash": "301 → 200"
+  }
+]

@@ -1,11 +1,12 @@
-import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
+import { JsonLd, person } from "@/lib/structured-data";
 import { Reading, lead } from "@/components/Reading";
 import { link } from "@/components/Page";
 
-export const metadata: Metadata = {
+export const metadata = pageMeta("/about/", {
     title: "Preet Panchal — About",
     description: "I build apps and tools, with help from AI. None of my apps collects your data, runs analytics or tracks you.",
-};
+});
 
 // One short page in Preet's own words. The line about the apps is what all four privacy
 // policies say. It stops short of "nothing leaves your phone", because GeoLens sends a location
@@ -13,6 +14,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
     return (
         <Reading back={{ href: "/", label: "Back to Portfolio" }} title="About" meta="Last updated: November 1, 2026">
+            <JsonLd nodes={[{ "@type": "ProfilePage", mainEntity: person }]} />
             <div className="space-y-4">
                 <p className={lead}>I&apos;m Preet. I build apps and tools, with help from AI.</p>
                 <p>

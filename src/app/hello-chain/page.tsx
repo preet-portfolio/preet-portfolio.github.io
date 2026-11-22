@@ -1,10 +1,11 @@
+import { pageMeta } from "@/lib/seo";
 import { backHref } from "@/data/work";
 import { Card, Hero, Page, Row, link, note } from "@/components/Page";
 
-export const metadata = {
+export const metadata = pageMeta("/hello-chain/", {
     title: "Hello, Chain | An On-Chain Guestbook",
     description: "Hello, Chain is an on-chain guestbook: write a short hello, sign it with Face ID or a fingerprint, and it is stored for good. No wallet, no crypto, no fees.",
-};
+});
 
 const SOURCE = "https://github.com/preet-portfolio/hello-chain";
 

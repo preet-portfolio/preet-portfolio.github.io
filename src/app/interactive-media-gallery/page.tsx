@@ -1,10 +1,11 @@
+import { pageMeta } from "@/lib/seo";
 import { backHref } from "@/data/work";
 import { Card, Hero, Page, Row, link, note, quietLink } from "@/components/Page";
 
-export const metadata = {
+export const metadata = pageMeta("/interactive-media-gallery/", {
     title: "The Hand Inside the Equation | Interactive Media Gallery",
     description: "A live gallery of interactive media studies: marbling from its maths, light bending around a black hole, and your camera drawn in text. Each piece is checked against an independent reference.",
-};
+});
 
 const LIVE = "https://interactive-media-gallery.vercel.app";
 

@@ -1,10 +1,11 @@
+import { pageMeta } from "@/lib/seo";
 import { backHref } from "@/data/work";
 import { Card, Hero, Page, Row, link, quietLink } from "@/components/Page";
 
-export const metadata = {
+export const metadata = pageMeta("/auditwedge/", {
     title: "AuditWedge | SKU-Level Margin Audit",
     description: "A deep dive into AuditWedge: the SKU-level margin-leak audit tool for e-commerce sellers.",
-};
+});
 
 export default function AuditWedgePage() {
     return (

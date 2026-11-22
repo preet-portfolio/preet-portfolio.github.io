@@ -1,0 +1,116 @@
+{
+  "fetched": "2026-11-22",
+  "source": "https://itunes.apple.com/lookup?id=1874836869&entity=software",
+  "apps": [
+    {
+      "trackId": 6823962224,
+      "trackName": "Agitate",
+      "sellerName": "Preet Panchal",
+      "artistId": 1874836869,
+      "trackViewUrl": "https://apps.apple.com/us/app/agitate/id6823962224?uo=4",
+      "version": "1.1",
+      "currentVersionReleaseDate": "2026-10-22T02:03:26Z",
+      "releaseDate": "2026-10-20T07:00:00Z",
+      "minimumOsVersion": "17.0",
+      "primaryGenreName": "Photo & Video",
+      "genres": [
+        "Photo & Video",
+        "Entertainment"
+      ],
+      "price": 0,
+      "formattedPrice": "Free",
+      "contentAdvisoryRating": "4+",
+      "userRatingCount": 0,
+      "features": [],
+      "languageCodesISO2A": [
+        "EN"
+      ],
+      "ipadScreenshots": 0,
+      "macDesktop": false
+    },
+    {
+      "trackId": 6779347733,
+      "trackName": "GeoLens — Geotag Camera",
+      "sellerName": "Preet Panchal",
+      "artistId": 1874836869,
+      "sellerUrl": "https://preet-portfolio.github.io/geolens/",
+      "trackViewUrl": "https://apps.apple.com/us/app/geolens-geotag-camera/id6779347733?uo=4",
+      "version": "1.5",
+      "currentVersionReleaseDate": "2026-10-15T05:20:21Z",
+      "releaseDate": "2026-06-16T07:00:00Z",
+      "minimumOsVersion": "17.0",
+      "primaryGenreName": "Photo & Video",
+      "genres": [
+        "Photo & Video",
+        "Business"
+      ],
+      "price": 0,
+      "formattedPrice": "Free",
+      "contentAdvisoryRating": "4+",
+      "userRatingCount": 0,
+      "features": [],
+      "languageCodesISO2A": [
+        "EN"
+      ],
+      "ipadScreenshots": 0,
+      "macDesktop": false
+    },
+    {
+      "trackId": 6759193013,
+      "trackName": "DocFort",
+      "sellerName": "Preet Panchal",
+      "artistId": 1874836869,
+      "trackViewUrl": "https://apps.apple.com/us/app/docfort/id6759193013?uo=4",
+      "version": "1.5",
+      "currentVersionReleaseDate": "2026-02-25T20:34:39Z",
+      "releaseDate": "2026-02-25T08:00:00Z",
+      "minimumOsVersion": "26.2",
+      "primaryGenreName": "Utilities",
+      "genres": [
+        "Utilities",
+        "Productivity"
+      ],
+      "price": 0,
+      "formattedPrice": "Free",
+      "contentAdvisoryRating": "4+",
+      "userRatingCount": 0,
+      "features": [
+        "iosUniversal"
+      ],
+      "languageCodesISO2A": [
+        "EN"
+      ],
+      "ipadScreenshots": 4,
+      "macDesktop": false
+    },
+    {
+      "trackId": 6806356565,
+      "trackName": "Deflate: Compress PDF & JPG",
+      "sellerName": "Preet Panchal",
+      "artistId": 1874836869,
+      "sellerUrl": "https://preet-portfolio.github.io/deflate/",
+      "trackViewUrl": "https://apps.apple.com/us/app/deflate-compress-pdf-jpg/id6806356565?uo=4",
+      "version": "1.0",
+      "currentVersionReleaseDate": "2026-09-08T12:51:06Z",
+      "releaseDate": "2026-09-08T07:00:00Z",
+      "minimumOsVersion": "26.0",
+      "primaryGenreName": "Productivity",
+      "genres": [
+        "Productivity",
+        "Utilities"
+      ],
+      "price": 0,
+      "formattedPrice": "Free",
+      "contentAdvisoryRating": "4+",
+      "userRatingCount": 0,
+      "features": [
+        "iosUniversal"
+      ],
+      "languageCodesISO2A": [
+        "EN"
+      ],
+      "ipadScreenshots": 5,
+      "macDesktop": true
+    }
+  ]
+}

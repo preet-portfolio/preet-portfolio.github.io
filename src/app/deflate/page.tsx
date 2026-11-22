@@ -1,12 +1,16 @@
+import { pageMeta } from "@/lib/seo";
+import { AppSummary } from "@/lib/structured-data";
 import Link from "next/link";
 import { backHref } from "@/data/work";
 import { Card, Hero, Labels, Page, Row, link, note } from "@/components/Page";
 
-export const metadata = {
+export const metadata = pageMeta("/deflate/", {
+    image: "/deflate-logo.png",
+    appStoreId: "6806356565",
     title: "Deflate | PDFs and Photos, Aimed at the Size You Were Asked For",
     description:
         "Deflate compresses PDFs and images down to a size you name in kilobytes, then shows you the size it reached. Crop a passport photo to spec, make a scan searchable, merge, split, rotate — entirely on device, with no network code at all.",
-};
+});
 
 export default function DeflatePage() {
     return (
@@ -20,6 +24,7 @@ export default function DeflatePage() {
             }
         >
             <Hero icon="/deflate-logo.png" name="Deflate" tagline="PDFs and photos, aimed at the size you were asked for" />
+            <AppSummary id="deflate" />
 
             <div className="grid items-start gap-6 lg:grid-cols-[3fr_2fr]">
                 <div className="pb-4">

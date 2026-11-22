@@ -1,10 +1,14 @@
+import { pageMeta } from "@/lib/seo";
+import { AppSummary } from "@/lib/structured-data";
 import { backHref } from "@/data/work";
 import { AppStoreBadge, Card, Hero, Page, Row, link, quietLink } from "@/components/Page";
 
-export const metadata = {
+export const metadata = pageMeta("/docfort/", {
+    image: "/docfort-logo.png",
+    appStoreId: "6759193013",
     title: "DocFort | Digital Document Vault",
     description: "A deep dive into DocFort: The privacy-first document vault for iPhone and iPad.",
-};
+});
 
 export default function DocFortPage() {
     return (
@@ -18,6 +22,7 @@ export default function DocFortPage() {
             }
         >
             <Hero icon="/docfort-logo.png" iconAlt="DocFort Logo" name="DocFort" tagline="A Vault for the Details of Life's Critical Documents" />
+            <AppSummary id="docfort" />
 
             <p className="max-w-reading text-lg">
                 An underserved premium consumer market exists for intelligent document protection platforms. DocFort is not just a tracker; it&apos;s a privacy-first Digital Vault designed around Apple&apos;s intelligent on-device processing to solve the &quot;Traveler&apos;s Nightmare&quot; of missed expirations.

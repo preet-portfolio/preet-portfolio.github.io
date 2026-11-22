@@ -1,10 +1,11 @@
+import { pageMeta } from "@/lib/seo";
 import { backHref } from "@/data/work";
 import { Card, Hero, Page, Row, link, note, quietLink } from "@/components/Page";
 
-export const metadata = {
+export const metadata = pageMeta("/wake/", {
     title: "wake | A Living Drawing Instrument",
     description: "wake is a generative-art instrument for the browser: thousands of line-heads move through fields of force across 100,000 designs and fifteen behaviours, six of them real physics and maths simulated from their equations.",
-};
+});
 
 const LIVE = "https://wake-black.vercel.app";
 

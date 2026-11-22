@@ -1,15 +1,13 @@
-import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import { backHref } from "@/data/work";
 import { AppStoreBadge } from "@/components/Page";
 
-export const metadata: Metadata = {
+export const metadata = pageMeta("/join/", {
     title: "Get DocFort",
     description: "Get DocFort, the privacy-first document vault for iPhone and iPad, on the App Store.",
-    other: {
-        "apple-itunes-app": "app-id=6759193013",
-    },
-};
+    appStoreId: "6759193013",
+});
 
 // A page that only hands people on to the App Store, so it stands alone and centred, with the
 // way back after the badge rather than in the header.

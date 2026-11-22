@@ -1,11 +1,12 @@
+import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import { link } from "@/components/Page";
 import { Reading, Section, list } from "@/components/Reading";
 
-export const metadata = {
+export const metadata = pageMeta("/geolens/terms/", {
     title: "GeoLens — Terms of Use (EULA)",
     description: "GeoLens terms of use: subscriptions, accuracy disclosures, and acceptable use.",
-};
+});
 
 export default function GeoLensTermsPage() {
     return (
