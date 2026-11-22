@@ -37,7 +37,7 @@
       "minimumOs": "26.2",
       "category": "Utilities",
       "price": 0,
-      "kind": "a vault for the details of your important documents",
+      "kind": "a document vault",
       "does": "It reads a document on your device, keeps the details you confirm rather than the photo, and reminds you before the document expires.",
       "data": "It collects no data."
     }
