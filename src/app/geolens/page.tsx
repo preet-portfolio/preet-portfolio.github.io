@@ -1,9 +1,12 @@
 import { pageMeta } from "@/lib/seo";
+import { AppSummary } from "@/lib/structured-data";
 import Link from "next/link";
 import { backHref } from "@/data/work";
 import { AppStoreBadge, Card, Hero, Labels, Page, Row, link, note } from "@/components/Page";
 
 export const metadata = pageMeta("/geolens/", {
+    image: "/geolens-logo.png",
+    appStoreId: "6779347733",
     title: "GeoLens | Geotagged Photos with an Audit Trail",
     description: "GeoLens stamps every photo with coordinates, address, a map of the spot, and an EXIF audit trail. Built for surveyors, valuers, and field inspectors. Available on the App Store.",
 });
@@ -17,6 +20,7 @@ export default function GeoLensPage() {
             footer={<p>Built in Swift with SwiftUI, SwiftData, StoreKit 2, MapKit and WeatherKit, with 240 tests.</p>}
         >
             <Hero icon="/geolens-logo.png" iconAlt="GeoLens App Icon" name="GeoLens" tagline="Geotagged Photos with an Audit Trail" />
+            <AppSummary id="geolens" />
 
             <div className="grid items-start gap-6 lg:grid-cols-[3fr_2fr]">
                 <div className="pb-4">

@@ -1,4 +1,5 @@
 import { pageMeta } from "@/lib/seo";
+import { JsonLd, person } from "@/lib/structured-data";
 import { Reading, lead } from "@/components/Reading";
 import { link } from "@/components/Page";
 
@@ -13,6 +14,7 @@ export const metadata = pageMeta("/about/", {
 export default function AboutPage() {
     return (
         <Reading back={{ href: "/", label: "Back to Portfolio" }} title="About" meta="Last updated: November 1, 2026">
+            <JsonLd nodes={[{ "@type": "ProfilePage", mainEntity: person }]} />
             <div className="space-y-4">
                 <p className={lead}>I&apos;m Preet. I build apps and tools, with help from AI.</p>
                 <p>

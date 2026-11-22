@@ -2,6 +2,7 @@ import Link from "next/link";
 import WorkGroup from "@/components/WorkGroup";
 import { apps, projects } from "@/data/work";
 import { pageMeta } from "@/lib/seo";
+import { JsonLd, person, website } from "@/lib/structured-data";
 
 export const metadata = pageMeta("/", {
   title: "Preet Panchal — Builder",
@@ -13,6 +14,7 @@ const navLink = "p-3 text-muted no-underline hover:text-accent";
 export default function Home() {
   return (
     <div className="min-h-screen overflow-x-clip">
+      <JsonLd nodes={[website, person]} />
       <header className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between gap-3 px-4 py-7 font-mono text-nav text-muted md:px-6">
         <span>PP — {new Date().getFullYear()}</span>
         <nav aria-label="Main" className="flex gap-1">

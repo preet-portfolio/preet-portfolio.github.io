@@ -1,0 +1,45 @@
+{
+  "_rule": "Facts each live app's page states in plain words and in its structured data. storeName, released, minimumOs, category and price come from Apple's lookup for developer 1874836869, and npm run check:seo-facts fails when they stop matching. does and data are the app's own claims: change them only to what the live version does, in step with its privacy policy.",
+  "apps": {
+    "agitate": {
+      "storeName": "Agitate",
+      "released": "2026-10-20",
+      "minimumOs": "17.0",
+      "category": "Photo & Video",
+      "price": 0,
+      "kind": "an instant-camera app",
+      "does": "Every photo prints as a blank card and develops as you shake your phone.",
+      "data": "It collects no data: there are no accounts, analytics or ads, and no networking code."
+    },
+    "deflate": {
+      "storeName": "Deflate: Compress PDF & JPG",
+      "released": "2026-09-08",
+      "minimumOs": "26.0",
+      "category": "Productivity",
+      "price": 0,
+      "kind": "a PDF and photo compressor",
+      "does": "It shrinks PDFs and photos to a size you name in kilobytes, such as an upload form's limit, and for a single file tells you the size it reached.",
+      "data": "It collects no data and has no networking code, so your files never leave your device."
+    },
+    "geolens": {
+      "storeName": "GeoLens — Geotag Camera",
+      "released": "2026-06-16",
+      "minimumOs": "17.0",
+      "category": "Photo & Video",
+      "price": 0,
+      "kind": "a geotag camera",
+      "does": "It stamps each photo with its coordinates, address, a map of the spot and the time, and writes the coordinates, the time and your name into the photo's EXIF metadata. The free plan has 5 stamped captures a month; Premium and Pro are subscriptions.",
+      "data": "It collects no data. To draw the map, look up the address and fetch the weather, it sends the capture's coordinates to Apple."
+    },
+    "docfort": {
+      "storeName": "DocFort",
+      "released": "2026-02-25",
+      "minimumOs": "26.2",
+      "category": "Utilities",
+      "price": 0,
+      "kind": "a vault for the details of your important documents",
+      "does": "It reads a document on your device, keeps the details you confirm rather than the photo, and reminds you before the document expires.",
+      "data": "It collects no data."
+    }
+  }
+}
