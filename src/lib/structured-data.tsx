@@ -79,7 +79,8 @@ export function mobileApplication(id: AppId) {
         author: { "@id": PERSON_ID },
         publisher: { "@id": PERSON_ID },
         installUrl: `https://apps.apple.com/app/id${a.appStoreId}`,
-        sameAs: [`https://apps.apple.com/app/id${a.appStoreId}`],
+        // The App Store listing, and the app's own website where it has one, are the same app.
+        sameAs: [`https://apps.apple.com/app/id${a.appStoreId}`, ...("website" in f ? [f.website] : [])],
         offers: { "@type": "Offer", price: String(f.price), priceCurrency: "USD" },
     };
 }
