@@ -61,6 +61,18 @@
       ]
     },
     {
+      "id": "tiny-python-toybox",
+      "group": "projects",
+      "name": "Tiny Python Toybox",
+      "line": "21 toys from Ken Youens-Clark’s Tiny Python Projects, running real Python in your browser. Each passes the book’s tests, then gremlins show what those tests miss.",
+      "status": "Live on the web",
+      "kind": "Python and testing",
+      "links": [
+        { "label": "Play the toys", "href": "https://tiny-python-tested.vercel.app/" },
+        { "label": "Source", "href": "https://github.com/preet-portfolio/tiny-python-tested" }
+      ]
+    },
+    {
       "id": "football-sql",
       "group": "projects",
       "name": "World Cup 2022 in SQL",
